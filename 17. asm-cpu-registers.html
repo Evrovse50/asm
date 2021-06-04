@@ -1,0 +1,485 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <title>Учебное по дисциплине "Системное программирование"</title>
+</head>
+
+<body onload="PriZagruzke()">
+    <div class="wrapper">
+
+
+
+
+        <div class="main-container">
+            <div class="mainWrap">
+
+                <a id="touch-menu" class="mobile-menu" href="#" onclick="oAdaptiv()">
+                    <div class="buteer">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <i class="icon-reorder"></i>Список глав
+                </a>
+                <div id="main-topSpisok">
+                <nav>
+                    <ul class="menu" id="sub-menu">
+                        <li>
+                            <a href="index.html">Предисловие</a>
+                        </li>
+
+                        <li><a href="2. introduction.html">Введение</a>
+                            <ul>
+                                <li><a href="3. intro-cpu.html">Немного о процессорах</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Быстрый старт</a>
+                            <ul>
+                                <li style="z-index: 9;"><a href="4. start-first.html" style="z-index: 10;">Первая
+                                        программа</a>
+                                 
+                                        <li><a href="5. start-emu8086.html">Emu8086</a></li>
+                                        <li><a href="6. start-debug.html">Debug</a></li>
+                                        <li><a href="7. start-asm.html">MASM, TASM и WASM</a>
+                                            <ul>
+                                                <li><a href="8. start-tasm.html">Ассемблирование в TASM</a></li>
+                                                <li><a href="9. start-masm.html">Ассемблирование в MASM</a></li>
+                                                <li><a href="10. start-wasm.html">Ассемблирование в WASM</a></li>
+                                                <li style="z-index: 10;"><a href="11. start-run.html" >Выполнение программы</a></li>
+                                                <li><a href="12. start-bat.html">Использование BAT-файлов</a></li>
+                                            </ul>
+
+                                        </li>
+                                        <li style="z-index: 6;"><a href="13. start-hex.html" >Шестнадцатеричный редактор</a></li>
+                                  
+                                </li>
+
+
+                               
+                            </ul>
+                        <li><a href="14. asm.html">Введение в ассемблер</a>
+                            <ul>
+                                <li style="z-index: 6;"><a href="15. asm-computer.html">Как устроен компьютер</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="16. asm-cpu.html"> Структура процессора</a></li>
+                                        <li style="z-index: 7;"><a href="17. asm-cpu-registers.html"> Регистры процессора</a></li>
+                                        <li style="z-index: 7;"><a href="18. asm-cycle-command.html"> Цикл выполнения команды</a></li>
+                                        <li style="z-index: 7;"><a href="19. asm-memory.html"> Организация памяти</a></li>
+                                        <li style="z-index: 7;"><a href="20. asm-real-mode.html"> Реальный режим</a></li>
+                                        <li style="z-index: 7;"><a href="21. asm-protected-mode.html"> Защищённый режим</a></li>
+                                    </ul>
+                                </li>
+                                <li style="z-index: 2;"><a href="22. asm-number-systems.html">Системы счисления</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="23. asm-binary-system.html">Двоичная система счисления</a></li>
+                                        <li style="z-index: 1;"><a href="24. asm-hex-system.html"> Шестнадцатеричная система счисления</a></li>
+                                        <li style="z-index: 7;"><a href="25. asm-octal-system.html"> Другие системы</a></li>
+                                    </ul></li>
+                                <li style="z-index: 1;"><a href="26. asm-data-presentation.html">Представление данных в памяти компьютера</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="27. asm-positive-numbers.html">Положительные числа</a></li>
+                                        <li style="z-index: 7;"><a href="28. asm-negative-numbers.html">Отрицательные числа</a></li>
+                                        <li style="z-index: 7;"><a href="29. asm-overflow.html">Что такое переполнение</a></li>
+                                        <li style="z-index: 7;"><a href="30. asm-flags-register.html">Регистр флагов</a></li>
+                                        <li style="z-index: 7;"><a href="31. asm-character-codes.html">Коды символов</a></li>
+                                        <li style="z-index: 7;"><a href="39. bcd.html">Что такое BCD</a></li>
+                                    </ul>
+                                   
+                                </li>
+
+                               
+                            </ul>
+                            <li style="z-index: 7;"><a href="32. asm-real.html">Вещественные числа</a>
+                                <ul>
+                                    <li style="z-index: 7;"><a href="33. asm-real-first.html">Первая попытка</a></li>
+                                    <li style="z-index: 7;"><a href="34. asm-real-normalization.html">Нормализованная запись числа</a></li>
+                                    <li style="z-index: 7;"><a href="35. asm-real-frac.html">Преобразование дробной части в двоичную форму</a></li>
+                                    <li style="z-index: 7;"><a href="36. asm-real-memory.html">Представление вещественных чисел в памяти компьютера</a></li>
+                                    <li style="z-index: 7;"><a href="37. asm-real-fixed-point.html">Числа с фиксированной точкой</a></li>
+                                    <li style="z-index: 7;"><a href="38. asm-real-floating-point.html">Числа с плавающей точкой</a></li>
+
+                                </ul>
+                            </li>
+                            <li style="z-index: 7;"><a href="40. procedures-in-assembler.html">Процедуры в Ассемблере</a></li>
+                        
+                        </li>
+
+
+
+                        <li style="z-index: 7;"><a href="Test.html">Тестирование</a></li>
+                        <li><a href="16. asm-cpu.html"> < </a></li>
+                        <li><a href="18. asm-cycle-command.html"> > </a></li>
+                    </ul>
+                </nav>
+            </div>
+            </div>
+            <div id="main-topSpisok2" style="display: none;">
+                <nav>
+                    <ul class="menu" id="sub-menu" style="display: block; left: 9px;">
+
+                        <li>
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li style="z-index: 7;"><a href="Test.html">Тестирование</a></li>
+                        <li>
+                            <a href="index.html">Предисловие</a>
+                        </li>
+
+                        <li><a href="2. introduction.html">Введение</a>
+                            <ul style="left: 0px;">
+                                <li><a href="3. intro-cpu.html">Немного о процессорах</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Быстрый старт</a>
+                            <ul style="left: 0px;">
+                                <li style="z-index: 9;"><a href="4. start-first.html" style="z-index: 10;">Первая
+                                        программа</a>
+                                 
+                                        <li><a href="5. start-emu8086.html">Emu8086</a></li>
+                                        <li><a href="6. start-debug.html">Debug</a></li>
+                                        <li><a href="7. start-asm.html">MASM, TASM и WASM</a>
+                                            <ul style="left: 0px;">
+                                                <li><a href="8. start-tasm.html">Ассемблирование в TASM</a></li>
+                                                <li><a href="9. start-masm.html">Ассемблирование в MASM</a></li>
+                                                <li><a href="10. start-wasm.html">Ассемблирование в WASM</a></li>
+                                                <li style="z-index: 10;"><a href="11. start-run.html" >Выполнение программы</a></li>
+                                                <li><a href="12. start-bat.html">Использование BAT-файлов</a></li>
+                                            </ul>
+
+                                        </li>
+                                        <li style="z-index: 6;"><a href="13. start-hex.html" >Шестнадцатеричный редактор</a></li>
+                                  
+                                </li>
+                            </ul>
+                        <li><a href="14. asm.html">Введение в ассемблер</a>
+                            <ul style="left: 0px;">
+                                <li style="z-index: 6;"><a href="15. asm-computer.html">Как устроен компьютер</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="16. asm-cpu.html"> Структура процессора</a></li>
+                                        <li style="z-index: 7;"><a href="17. asm-cpu-registers.html"> Регистры процессора</a></li>
+                                        <li style="z-index: 7;"><a href="18. asm-cycle-command.html"> Цикл выполнения команды</a></li>
+                                        <li style="z-index: 7;"><a href="19. asm-memory.html"> Организация памяти</a></li>
+                                        <li style="z-index: 7;"><a href="20. asm-real-mode.html"> Реальный режим</a></li>
+                                        <li style="z-index: 7;"><a href="21. asm-protected-mode.html"> Защищённый режим</a></li>
+                                    </ul>
+                                </li>
+                                <li style="z-index: 2;"><a href="22. asm-number-systems.html">Системы счисления</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="23. asm-binary-system.html">Двоичная система счисления</a></li>
+                                        <li style="z-index: 1;"><a href="24. asm-hex-system.html"> Шестнадцатеричная система счисления</a></li>
+                                        <li style="z-index: 7;"><a href="25. asm-octal-system.html"> Другие системы</a></li>
+                                    </ul></li>
+                                <li style="z-index: 1;"><a href="26. asm-data-presentation.html">Представление данных в памяти компьютера</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="27. asm-positive-numbers.html">Положительные числа</a></li>
+                                        <li style="z-index: 7;"><a href="28. asm-negative-numbers.html">Отрицательные числа</a></li>
+                                        <li style="z-index: 7;"><a href="29. asm-overflow.html">Что такое переполнение</a></li>
+                                        <li style="z-index: 7;"><a href="30. asm-flags-register.html">Регистр флагов</a></li>
+                                        <li style="z-index: 7;"><a href="31. asm-character-codes.html">Коды символов</a></li>
+                                        <li style="z-index: 7;"><a href="39. bcd.html">Что такое BCD</a></li>
+                                    </ul>
+                                   
+                                </li>
+
+                               
+                            </ul>
+                            <li style="z-index: 7;"><a href="32. asm-real.html">Вещественные числа</a>
+                                <ul style="left: 0px;">
+                                    <li style="z-index: 7;"><a href="33. asm-real-first.html">Первая попытка</a></li>
+                                    <li style="z-index: 7;"><a href="34. asm-real-normalization.html">Нормализованная запись числа</a></li>
+                                    <li style="z-index: 7;"><a href="35. asm-real-frac.html">Преобразование дробной части в двоичную форму</a></li>
+                                    <li style="z-index: 7;"><a href="36. asm-real-memory.html">Представление вещественных чисел в памяти компьютера</a></li>
+                                    <li style="z-index: 7;"><a href="37. asm-real-fixed-point.html">Числа с фиксированной точкой</a></li>
+                                    <li style="z-index: 7;"><a href="38. asm-real-floating-point.html">Числа с плавающей точкой</a></li>
+
+                                </ul style="left: 0px;">
+                            </li>
+                            <li style="z-index: 7;"><a href="40. procedures-in-assembler.html">Процедуры в Ассемблере</a></li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content">
+
+                <div class="nav">
+                    <p>
+                        <a href="16. asm-cpu.html" style="float: left;margin-top: 40%;"><</a>
+                        <a href="18. asm-cycle-command.html" style="float: right;margin-top: 40%;">></a>
+                    </p>
+                </div>
+                <article>
+
+                    <div id="contTxt">
+
+
+<!--Текст страницы-->
+
+<!--Текст страницы-->
+<h1>Регистры процессора</h1>
+<p>
+
+
+<p>
+Начиная с модели 80386 процессоры Intel предоставляют 16 основных регистров для 
+пользовательских программ и ещё 11 регистров для работы с мультимедийными приложениями (MMX) 
+и числами с плавающей точкой (FPU/NPX). Все команды так или иначе изменяют содержимое регистров. 
+Как уже говорилось, обращаться к регистрам быстрее и удобнее, чем к памяти. 
+Поэтому при программировании на языке Ассемблера регистры используются очень широко.
+</p>
+<p>
+В этом разделе мы рассмотрим основные регистры процессоров Intel. Названия и 
+состав/количество регистров для других процессоров могут отличаться. Итак, основные 
+регистры процессоров Intel.
+</p>
+<p>
+<b>Таблица 2.1. Основные регистры процессора</b>.<br><br>
+<table cellpadding="5px">
+<tr bgcolor="silver">
+  <td><b>Название</b></td>
+  <td><b>Разрядность</b></td>
+  <td><b>Основное назначение</b></td>
+</tr>
+<tr>
+  <td><center>EAX</center></td>
+  <td><center>32</center></td>
+  <td>Аккумулятор</td>
+</tr>
+<tr>
+  <td><center>EBX</center></td>
+  <td><center>32</center></td>
+  <td>База</td>
+</tr>
+<tr>
+  <td><center>ECX</center></td>
+  <td><center>32</center></td>
+  <td>Счётчик</td>
+</tr>
+<tr>
+  <td><center>EDX</center></td>
+  <td><center>32</center></td>
+  <td>Регистр данных</td>
+</tr>
+<tr>
+  <td><center>EBP</center></td>
+  <td><center>32</center></td>
+  <td>Указатель базы</td>
+</tr>
+<tr>
+  <td><center>ESP</center></td>
+  <td><center>32</center></td>
+  <td>Указатель стека</td>
+</tr>
+<tr>
+  <td><center>ESI</center></td>
+  <td><center>32</center></td>
+  <td>Индекс источника</td>
+</tr>
+<tr>
+  <td><center>EDI</center></td>
+  <td><center>32</center></td>
+  <td>Индекс приёмника</td>
+</tr>
+<tr>
+  <td><center>EFLAGS</center></td>
+  <td><center>32</center></td>
+  <td>Регистр флагов</td>
+</tr>
+<tr>
+  <td><center>EIP</center></td>
+  <td><center>32</center></td>
+  <td>Указатель инструкции (команды)</td>
+</tr>
+<tr>
+  <td><center>CS</center></td>
+  <td><center>16</center></td>
+  <td>Сегментный регистр</td>
+</tr>
+<tr>
+  <td><center>DS</center></td>
+  <td><center>16</center></td>
+  <td>Сегментный регистр</td>
+</tr>
+<tr>
+  <td><center>ES</center></td>
+  <td><center>16</center></td>
+  <td>Сегментный регистр</td>
+</tr>
+<tr>
+  <td><center>FS</center></td>
+  <td><center>16</center></td>
+  <td>Сегментный регистр</td>
+</tr>
+<tr>
+  <td><center>GS</center></td>
+  <td><center>16</center></td>
+  <td>Сегментный регистр</td>
+</tr>
+<tr>
+  <td><center>SS</center></td>
+  <td><center>16</center></td>
+  <td>Сегментный регистр</td>
+</tr>
+</table>
+
+<p>
+Регистры EAX, EBX, ECX, EDX – это регистры общего назначения. Они имеют 
+определённое назначение (так уж сложилось исторически), однако в них можно хранить 
+любую информацию.
+</p>
+<p>
+Регистры EBP, ESP, ESI, EDI – это также регистры общего назначения. Они имеют уже 
+более конкретное назначение. В них также можно хранить пользовательские данные, 
+но делать это нужно уже более осторожно, чтобы не получить «неожиданный» результат.
+</p>
+<p>
+Регистр флагов и сегментные регистры требуют отдельного описания и будут более 
+подробно рассмотрены далее.
+</p>
+<p>
+Пока для вас здесь слишком много непонятных слов, но со временем всё прояснится)))
+</p>
+<p>
+Когда-то процессоры были 16-разрядными, и, соответственно, все их регистры были 
+также 16-разрядными. Для совместимости со старыми программами, а также для удобства 
+программирования некоторые регистры разделены на 2 или 4 «маленьких» регистра, 
+у каждого из которых есть свои имена. В таблице 2.2 перечислены такие регистры. 
+</p>
+<p>
+Вот пример такого регистра.
+</p>
+<p>
+<center>
+<img border="0" width="580" src="http://av-assembler.ru/asm/afd/eax.png" alt="Структура регистра EAX" title="Структура регистра EAX">
+</center>
+</p>
+<p>
+Из этого следует, что вы можете написать в своей программе, например, такие команды:<pre>
+MOV	AX,  1
+MOV	EAX, 1</pre>
+Обе команды поместят в регистр AX число 1. Разница будет заключаться только в том, 
+что вторая команда обнулит старшие разряды регистра EAX, то есть после выполнения 
+второй команды в регистре EAX будет число 1. А первая команда оставит в старших 
+разрядах регистра EAX старые данные. И если там были данные, отличные от нуля, 
+то после выполнения первой команды в регистре EAX будет какое-то число, но не 1. 
+А вот в регистре AX будет число 1. Сложно? Ну это пока… Со временем вы к таким вещам привыкните.
+
+<p>
+Мы пока не говорили о разрядах (битах). Эту тему мы обсудим в разделах, посвящённых 
+системам счисления. А сейчас пока вам достаточно знать, что нулевой разряд (бит) – это 
+младший бит. Он крайний справа. Старший бит – крайний слева. Номер старшего бита 
+зависит от разрядности числа/регистра. Например, в 32-разрядном регистре старшим 
+битом является 31-й бит (потому что отсчёт начинается с 0, а не с 1).
+</p>
+<p>
+Ниже приведён список регистров общего назначения, которые можно поделить описанным 
+выше способом и при этом к «половинкам» и «четвертинкам» этих регистров можно 
+обращаться в программе как к отдельному регистру.
+</p>
+<p>
+<b>Таблица 2.2. «Делимые» регистры.</b>.<br><br>
+<table bgcolor="gray" border="0px" cellpadding="10" cellspacing="1">
+<tr bgcolor="silver">
+  <td rowspan="2"><b>Регистр</b></td>
+  <td><b>Старшие разряды</b></td>
+  <td colspan="2"><b>Имена 16-ти и 8-ми битных регистров</b></td>
+</tr>
+<tr bgcolor="silver">
+  <td align="center"><b>31…16</b></td>
+  <td align="center"><b>15…8</b></td>
+  <td align="center"><b>7…0</b></td>
+</tr>
+<tr bgcolor="white">
+  <td align="center" rowspan="2">EAX</td>
+  <td align="center" rowspan="2">...</td>
+  <td align="center" colspan="2">AX</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center">AH</td>
+  <td align="center">AL</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center" rowspan="2">EBX</td>
+  <td align="center" rowspan="2">...</td>
+  <td align="center" colspan="2">BX</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center">BH</td>
+  <td align="center">BL</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center" rowspan="2">ECX</td>
+  <td align="center" rowspan="2">...</td>
+  <td align="center" colspan="2">CX</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center">CH</td>
+  <td align="center">CL</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center" rowspan="2">EDX</td>
+  <td align="center" rowspan="2">...</td>
+  <td align="center" colspan="2">DX</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center">DH</td>
+  <td align="center">DL</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center">ESI</td>
+  <td align="center">...</td>
+  <td align="center" colspan="2">SI</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center">EDI</td>
+  <td align="center">...</td>
+  <td align="center" colspan="2">DI</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center">EBP</td>
+  <td align="center">...</td>
+  <td align="center" colspan="2">BP</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center">ESP</td>
+  <td align="center">...</td>
+  <td align="center" colspan="2">SP</td>
+</tr>
+<tr bgcolor="white">
+  <td align="center">EIP</td>
+  <td align="center">...</td>
+  <td align="center" colspan="2">IP</td>
+</tr>
+</table>
+
+<p>
+На этом мы закончим наше краткое знакомство с регистрами. Если вам пока не всё 
+понятно – просто прочитайте этот раздел, чтобы более-менее представлять себе, 
+что такое регистры. По мере приобретения новых знаний вы можете вернуться к этому 
+разделу и уже на новом уровне воспринять эту информацию.
+</p>
+<br>
+<!--Конец текста страницы-->
+
+
+
+
+</div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrapper3">
+            <div class="footer_bot">
+               
+                <div class="footer_bot_cop">Учебное по дисциплине "Системное программирование"</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

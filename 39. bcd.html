@@ -1,0 +1,506 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <title>Учебное по дисциплине "Системное программирование"</title>
+</head>
+
+<body onload="PriZagruzke()">
+    <div class="wrapper">
+
+
+
+
+        <div class="main-container">
+            <div class="mainWrap">
+
+                <a id="touch-menu" class="mobile-menu" href="#" onclick="oAdaptiv()">
+                    <div class="buteer">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <i class="icon-reorder"></i>Список глав
+                </a>
+                <div id="main-topSpisok">
+                <nav>
+                    <ul class="menu" id="sub-menu">
+                        <li>
+                            <a href="index.html">Предисловие</a>
+                        </li>
+
+                        <li><a href="2. introduction.html">Введение</a>
+                            <ul>
+                                <li><a href="3. intro-cpu.html">Немного о процессорах</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Быстрый старт</a>
+                            <ul>
+                                <li style="z-index: 9;"><a href="4. start-first.html" style="z-index: 10;">Первая
+                                        программа</a>
+                                 
+                                        <li><a href="5. start-emu8086.html">Emu8086</a></li>
+                                        <li><a href="6. start-debug.html">Debug</a></li>
+                                        <li><a href="7. start-asm.html">MASM, TASM и WASM</a>
+                                            <ul>
+                                                <li><a href="8. start-tasm.html">Ассемблирование в TASM</a></li>
+                                                <li><a href="9. start-masm.html">Ассемблирование в MASM</a></li>
+                                                <li><a href="10. start-wasm.html">Ассемблирование в WASM</a></li>
+                                                <li style="z-index: 10;"><a href="11. start-run.html" >Выполнение программы</a></li>
+                                                <li><a href="12. start-bat.html">Использование BAT-файлов</a></li>
+                                            </ul>
+
+                                        </li>
+                                        <li style="z-index: 6;"><a href="13. start-hex.html" >Шестнадцатеричный редактор</a></li>
+                                  
+                                </li>
+
+
+                               
+                            </ul>
+                        <li><a href="14. asm.html">Введение в ассемблер</a>
+                            <ul>
+                                <li style="z-index: 6;"><a href="15. asm-computer.html">Как устроен компьютер</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="16. asm-cpu.html"> Структура процессора</a></li>
+                                        <li style="z-index: 7;"><a href="17. asm-cpu-registers.html"> Регистры процессора</a></li>
+                                        <li style="z-index: 7;"><a href="18. asm-cycle-command.html"> Цикл выполнения команды</a></li>
+                                        <li style="z-index: 7;"><a href="19. asm-memory.html"> Организация памяти</a></li>
+                                        <li style="z-index: 7;"><a href="20. asm-real-mode.html"> Реальный режим</a></li>
+                                        <li style="z-index: 7;"><a href="21. asm-protected-mode.html"> Защищённый режим</a></li>
+                                    </ul>
+                                </li>
+                                <li style="z-index: 2;"><a href="22. asm-number-systems.html">Системы счисления</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="23. asm-binary-system.html">Двоичная система счисления</a></li>
+                                        <li style="z-index: 1;"><a href="24. asm-hex-system.html"> Шестнадцатеричная система счисления</a></li>
+                                        <li style="z-index: 7;"><a href="25. asm-octal-system.html"> Другие системы</a></li>
+                                    </ul></li>
+                                <li style="z-index: 1;"><a href="26. asm-data-presentation.html">Представление данных в памяти компьютера</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="27. asm-positive-numbers.html">Положительные числа</a></li>
+                                        <li style="z-index: 7;"><a href="28. asm-negative-numbers.html">Отрицательные числа</a></li>
+                                        <li style="z-index: 7;"><a href="29. asm-overflow.html">Что такое переполнение</a></li>
+                                        <li style="z-index: 7;"><a href="30. asm-flags-register.html">Регистр флагов</a></li>
+                                        <li style="z-index: 7;"><a href="31. asm-character-codes.html">Коды символов</a></li>
+                                        <li style="z-index: 7;"><a href="39. bcd.html">Что такое BCD</a></li>
+                                    </ul>
+                                   
+                                </li>
+
+                               
+                            </ul>
+                            <li style="z-index: 7;"><a href="32. asm-real.html">Вещественные числа</a>
+                                <ul>
+                                    <li style="z-index: 7;"><a href="33. asm-real-first.html">Первая попытка</a></li>
+                                    <li style="z-index: 7;"><a href="34. asm-real-normalization.html">Нормализованная запись числа</a></li>
+                                    <li style="z-index: 7;"><a href="35. asm-real-frac.html">Преобразование дробной части в двоичную форму</a></li>
+                                    <li style="z-index: 7;"><a href="36. asm-real-memory.html">Представление вещественных чисел в памяти компьютера</a></li>
+                                    <li style="z-index: 7;"><a href="37. asm-real-fixed-point.html">Числа с фиксированной точкой</a></li>
+                                    <li style="z-index: 7;"><a href="38. asm-real-floating-point.html">Числа с плавающей точкой</a></li>
+
+                                </ul>
+                            </li>
+                            <li style="z-index: 7;"><a href="40. procedures-in-assembler.html">Процедуры в Ассемблере</a></li>
+                        
+                        </li>
+
+
+
+                        <li style="z-index: 7;"><a href="Test.html">Тестирование</a></li>
+                        <li><a href="38. asm-real-floating-point.html"> < </a></li>
+                        <li><a href="40. procedures-in-assembler.html"> > </a></li>
+                    </ul>
+                </nav>
+            </div>
+            </div>
+            <div id="main-topSpisok2" style="display: none;">
+                <nav>
+                    <ul class="menu" id="sub-menu" style="display: block; left: 9px;">
+
+                        <li>
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li style="z-index: 7;"><a href="Test.html">Тестирование</a></li>
+                        <li>
+                            <a href="index.html">Предисловие</a>
+                        </li>
+
+                        <li><a href="2. introduction.html">Введение</a>
+                            <ul style="left: 0px;">
+                                <li><a href="3. intro-cpu.html">Немного о процессорах</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Быстрый старт</a>
+                            <ul style="left: 0px;">
+                                <li style="z-index: 9;"><a href="4. start-first.html" style="z-index: 10;">Первая
+                                        программа</a>
+                                 
+                                        <li><a href="5. start-emu8086.html">Emu8086</a></li>
+                                        <li><a href="6. start-debug.html">Debug</a></li>
+                                        <li><a href="7. start-asm.html">MASM, TASM и WASM</a>
+                                            <ul style="left: 0px;">
+                                                <li><a href="8. start-tasm.html">Ассемблирование в TASM</a></li>
+                                                <li><a href="9. start-masm.html">Ассемблирование в MASM</a></li>
+                                                <li><a href="10. start-wasm.html">Ассемблирование в WASM</a></li>
+                                                <li style="z-index: 10;"><a href="11. start-run.html" >Выполнение программы</a></li>
+                                                <li><a href="12. start-bat.html">Использование BAT-файлов</a></li>
+                                            </ul>
+
+                                        </li>
+                                        <li style="z-index: 6;"><a href="13. start-hex.html" >Шестнадцатеричный редактор</a></li>
+                                  
+                                </li>
+                            </ul>
+                        <li><a href="14. asm.html">Введение в ассемблер</a>
+                            <ul style="left: 0px;">
+                                <li style="z-index: 6;"><a href="15. asm-computer.html">Как устроен компьютер</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="16. asm-cpu.html"> Структура процессора</a></li>
+                                        <li style="z-index: 7;"><a href="17. asm-cpu-registers.html"> Регистры процессора</a></li>
+                                        <li style="z-index: 7;"><a href="18. asm-cycle-command.html"> Цикл выполнения команды</a></li>
+                                        <li style="z-index: 7;"><a href="19. asm-memory.html"> Организация памяти</a></li>
+                                        <li style="z-index: 7;"><a href="20. asm-real-mode.html"> Реальный режим</a></li>
+                                        <li style="z-index: 7;"><a href="21. asm-protected-mode.html"> Защищённый режим</a></li>
+                                    </ul>
+                                </li>
+                                <li style="z-index: 2;"><a href="22. asm-number-systems.html">Системы счисления</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="23. asm-binary-system.html">Двоичная система счисления</a></li>
+                                        <li style="z-index: 1;"><a href="24. asm-hex-system.html"> Шестнадцатеричная система счисления</a></li>
+                                        <li style="z-index: 7;"><a href="25. asm-octal-system.html"> Другие системы</a></li>
+                                    </ul></li>
+                                <li style="z-index: 1;"><a href="26. asm-data-presentation.html">Представление данных в памяти компьютера</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="27. asm-positive-numbers.html">Положительные числа</a></li>
+                                        <li style="z-index: 7;"><a href="28. asm-negative-numbers.html">Отрицательные числа</a></li>
+                                        <li style="z-index: 7;"><a href="29. asm-overflow.html">Что такое переполнение</a></li>
+                                        <li style="z-index: 7;"><a href="30. asm-flags-register.html">Регистр флагов</a></li>
+                                        <li style="z-index: 7;"><a href="31. asm-character-codes.html">Коды символов</a></li>
+                                        <li style="z-index: 7;"><a href="39. bcd.html">Что такое BCD</a></li>
+                                    </ul>
+                                   
+                                </li>
+
+                               
+                            </ul>
+                            <li style="z-index: 7;"><a href="32. asm-real.html">Вещественные числа</a>
+                                <ul style="left: 0px;">
+                                    <li style="z-index: 7;"><a href="33. asm-real-first.html">Первая попытка</a></li>
+                                    <li style="z-index: 7;"><a href="34. asm-real-normalization.html">Нормализованная запись числа</a></li>
+                                    <li style="z-index: 7;"><a href="35. asm-real-frac.html">Преобразование дробной части в двоичную форму</a></li>
+                                    <li style="z-index: 7;"><a href="36. asm-real-memory.html">Представление вещественных чисел в памяти компьютера</a></li>
+                                    <li style="z-index: 7;"><a href="37. asm-real-fixed-point.html">Числа с фиксированной точкой</a></li>
+                                    <li style="z-index: 7;"><a href="38. asm-real-floating-point.html">Числа с плавающей точкой</a></li>
+
+                                </ul style="left: 0px;">
+                            </li>
+                            <li style="z-index: 7;"><a href="40. procedures-in-assembler.html">Процедуры в Ассемблере</a></li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content">
+
+                <div class="nav">
+                    <p>
+                        <a href="38. asm-real-floating-point.html" style="float: left;margin-top: 40%;"><</a>
+                        <a href="40. procedures-in-assembler.html" style="float: right;margin-top: 40%;">></a>
+                    </p>
+                </div>
+                <article>
+
+                    <div id="contTxt">
+<h1>Что такое BCD</h1>
+<p>
+    <strong>BCD</strong> - это <strong>B</strong>inary-<strong>C</strong>oded <strong>D</strong>ecimal
+    (двоично-десятичный код). Он же 8421-BCD.
+</p>
+<p>
+    Это форма записи рациональных чисел, когда каждый десятичный разряд числа записывается в виде его четырёхразрядного
+    двоичного кода.
+</p>
+<center>
+    <iframe width="580" height="435" src="https://www.youtube.com/embed/Q0iUT1Ff69Y?rel=0" frameborder="0"
+        allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+</center>
+<p>
+    Вообще с помощью четырёхразрядного двоичного кода можно закодировать 16 чисел - это
+    <a>шестнадцатеричная система</a>.
+</p>
+<p>
+    Двоично-десятичный код отличается от шестнадцатеричной системы тем, что он использует только первые десять
+    комбинаций. Значения BCD приведены в таблице ниже.
+</p>
+<p>
+</p>
+<center>
+    <table bgcolor="silver" cellpadding="10px">
+        <tbody>
+            <tr>
+                <td><strong>Десятичное</strong></td>
+                <td><strong>HEX</strong></td>
+                <td><strong>BIN</strong></td>
+                <td><strong>BCD</strong></td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">0</td>
+                <td bgcolor="white" align="center">0</td>
+                <td bgcolor="white" align="center">0000</td>
+                <td bgcolor="white" align="center">0000</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">1</td>
+                <td bgcolor="white" align="center">1</td>
+                <td bgcolor="white" align="center">0001</td>
+                <td bgcolor="white" align="center">0001</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">2</td>
+                <td bgcolor="white" align="center">2</td>
+                <td bgcolor="white" align="center">0010</td>
+                <td bgcolor="white" align="center">0010</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">3</td>
+                <td bgcolor="white" align="center">3</td>
+                <td bgcolor="white" align="center">0011</td>
+                <td bgcolor="white" align="center">0011</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">4</td>
+                <td bgcolor="white" align="center">4</td>
+                <td bgcolor="white" align="center">0100</td>
+                <td bgcolor="white" align="center">0100</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">5</td>
+                <td bgcolor="white" align="center">5</td>
+                <td bgcolor="white" align="center">0101</td>
+                <td bgcolor="white" align="center">0101</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">6</td>
+                <td bgcolor="white" align="center">6</td>
+                <td bgcolor="white" align="center">0110</td>
+                <td bgcolor="white" align="center">0110</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">7</td>
+                <td bgcolor="white" align="center">7</td>
+                <td bgcolor="white" align="center">0111</td>
+                <td bgcolor="white" align="center">0111</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">8</td>
+                <td bgcolor="white" align="center">8</td>
+                <td bgcolor="white" align="center">1000</td>
+                <td bgcolor="white" align="center">1000</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">9</td>
+                <td bgcolor="white" align="center">9</td>
+                <td bgcolor="white" align="center">1001</td>
+                <td bgcolor="white" align="center">1001</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">10</td>
+                <td bgcolor="white" align="center">A</td>
+                <td bgcolor="white" align="center">1010</td>
+                <td bgcolor="#F78C1B" align="center">Запрещено</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">11</td>
+                <td bgcolor="white" align="center">B</td>
+                <td bgcolor="white" align="center">1011</td>
+                <td bgcolor="#F78C1B" align="center">Запрещено</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">12</td>
+                <td bgcolor="white" align="center">C</td>
+                <td bgcolor="white" align="center">1100</td>
+                <td bgcolor="#F78C1B" align="center">Запрещено</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">13</td>
+                <td bgcolor="white" align="center">D</td>
+                <td bgcolor="white" align="center">1101</td>
+                <td bgcolor="#F78C1B" align="center">Запрещено</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">14</td>
+                <td bgcolor="white" align="center">E</td>
+                <td bgcolor="white" align="center">1110</td>
+                <td bgcolor="#F78C1B" align="center">Запрещено</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">15</td>
+                <td bgcolor="white" align="center">F</td>
+                <td bgcolor="white" align="center">1111</td>
+                <td bgcolor="#F78C1B" align="center">Запрещено</td>
+            </tr>
+        </tbody>
+    </table>
+</center>
+<p></p>
+<p>
+    В BCD используются только первые 10 комбинаций, которыми можно закодировать 10 цифр от 0 до 9. Остальные комбинации
+    в BCD являются запрещёнными.
+</p>
+<p>
+    BCD код также применяется в телефонной связи. В этом случае кроме десятичных цифр кодируются символы * или #, или
+    любые другие. Для записи этих символов в коде BCD используются запрещенные комбинации:
+</p>
+<p>
+</p>
+<center>
+    <table bgcolor="silver" cellpadding="10px">
+        <tbody>
+            <tr>
+                <td><strong>BCD</strong></td>
+                <td><strong>Дополнительный символ</strong></td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">1010</td>
+                <td bgcolor="white" align="center">* (звёздочка)</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">1011</td>
+                <td bgcolor="white" align="center"># (решётка)</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">1100</td>
+                <td bgcolor="white" align="center">(плюс)</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">1101</td>
+                <td bgcolor="white" align="center">- (минус)</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">1110</td>
+                <td bgcolor="white" align="center">, (десятичная запятая)</td>
+            </tr>
+            <tr>
+                <td bgcolor="white" align="center">1111</td>
+                <td bgcolor="white" align="center">символ гашения</td>
+            </tr>
+        </tbody>
+    </table>
+</center>
+<p></p>
+<h2 id="params">
+    Преимущества и недостатки формата BCD
+</h2>
+<p>
+    <strong><u>Преимущества</u></strong>
+</p>
+<ol>
+    <li>Удобно использовать для вывода на индикаторы с одной цифрой. Например, в часах каждый индикатор отображает
+        десятичное число в двоично-десятичной системе (от 0 до 9).</li>
+    <li>Упрощён вывод чисел на индикацию - вместо последовательного деления на 10 требуется просто вывести на индикацию
+        каждый полубайт. По этой же причине проще ввод данных с цифровой клавиатуры.</li>
+    <li>Для <a>дробных чисел</a> (как с
+        фиксированной, так и с плавающей запятой) при переводе в человекочитаемый десятичный формат и наоборот не
+        теряется точность.</li>
+    <li>Упрощены умножение и деление на 10, а также округление.</li>
+</ol>
+<p>
+    По этим причинам двоично-десятичный формат применяется в калькуляторах и других устройствах, которые выводят данные
+    на семисегментные или другие индикаторы, где каждый отдельный индикатор отображает только одну цифру.
+</p>
+<p>
+    <strong><u>Недостатки</u></strong>
+</p>
+<p>
+</p>
+<ol>
+    <li>Требует больше памяти.</li>
+    <li>Усложнены арифметические операции.</li>
+</ol>
+<h2 id="oper">
+    Операции с BCD
+</h2>
+<p>
+    Так как в BCD данных используются только 10 возможных комбинаций 4-х битового поля вместо 16, существуют запрещённые
+    комбинации битов (см. выше). Поэтому, при сложении и вычитании чисел BCD действуют следующие правила:
+</p>
+<ol>
+    <li>При сложении двоично-десятичных чисел каждый раз, когда происходит перенос бита в старший полубайт, необходимо к
+        полубайту, от которого произошёл перенос, добавить поправочное значение <strong>0110</strong> = 6<sub>10</sub> =
+        (16<sub>10</sub> - 10<sub>10</sub>) - разница количеств комбинаций полубайта и используемых значений, то есть
+        всего комбинаций в тетраде 16, из них разрешённых 10, а запрещенных 6.</li>
+    <li>При сложении двоично-десятичных чисел каждый раз, когда встречается недопустимая для полубайта комбинация
+        (число, большее 9), необходимо к каждой недопустимой комбинации добавить поправочное значение <strong
+            style="color:blue;">0110</strong> с разрешением переноса в старшие полубайты.</li>
+    <li>При вычитании двоично-десятичных чисел, для каждого полубайта, получившего заём из старшего полубайта,
+        необходимо провести поправку, отняв значение <strong style="color:blue;">0110</strong>.</li>
+</ol>
+<p>
+    Поэтому почти в любом языке ассемблера есть специальные <a>команды</a> для работы с BCD числами.
+</p>
+<p>
+    Пример операции сложения двоично-десятичных чисел:
+</p>
+<p>
+    <strong>Требуется:</strong> Найти число Х = Y + Z, где Y = 0929, Z = 1538
+</p>
+<p>
+    <strong>Решение:</strong> Представим числа Y и Z в двоично-десятичной форме:
+</p>
+<p></p>
+<pre>Y =  929 (DEC) = 0000 1001 0010 1001 (BCD)
+    Z = 1538 (DEC) = 0001 0101 0011 1000 (BCD)</pre>
+<p></p>
+<p>
+    Суммируем числа Y и Z по правилам двоичной арифметики:
+</p>
+<p></p>
+<pre>        **       * 
+      0000 1001 0010 1001	(929)
+    + 0001 0101 0011 1000	(1538)
+      ___________________
+    = 0001 <strong style="color:red;">1110</strong> 0110 0001 - Двоичная сумма (7777)
+    +      <strong style="color:blue;">0110</strong>      <strong>0110</strong> - Поправка (по <strong>правилу 1</strong> и <strong style="color:blue;">правилу 2</strong>)
+      ___________________
+      0010 0100 0110 0111 - сумма BDC (2467)
+     
+    <strong style="color:red;">Красным жирным</strong> в сумме выделены запрещённые комбинации.
+    <strong style="color:blue;">Синим жирным</strong> выделены поправки по правилу 2.
+    <strong>Чёрным жирным</strong> выделены поправки по правилу 1.
+    
+    * — тетрада, из которой был перенос в старшую тетраду
+    ** — тетрада с запрещённой комбинацией битов (в сумме)</pre>
+<p></p>
+<p>
+    В тетраду, помеченную символом *, добавляем шестёрку, так как по правилам двоичной арифметики перенос унёс с собой
+    16, а по правилам десятичной арифметики должен был унести 10.
+</p>
+<p>
+    В тетраду, помеченную символом **, добавляем шестёрку и разрешаем распространение переноса, так как комбинация битов
+    1110 в сумме после сложения соответствует десятичному числу 14 и является запрещённой.
+</p>
+<p>
+    <strong>ПРИМЕЧАНИЕ</strong><br>
+    По сути BCD - это та же шестнадцатеричная система, только с числами от 0 до 9 (числа A...F являются запрещёнными).
+    То есть каждая тетрада записывается в числе BCD в отдельном разряде.
+</p>
+<br>
+</div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrapper3">
+            <div class="footer_bot">
+               
+                <div class="footer_bot_cop">Учебное по дисциплине "Системное программирование"</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

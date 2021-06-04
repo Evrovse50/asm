@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <title>Учебное по дисциплине "Системное программирование"</title>
+</head>
+
+<body onload="PriZagruzke()">
+    <div class="wrapper">
+
+
+
+
+        <div class="main-container">
+            <div class="mainWrap">
+
+                <a id="touch-menu" class="mobile-menu" href="#" onclick="oAdaptiv()">
+                    <div class="buteer">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <i class="icon-reorder"></i>Список глав
+                </a>
+                <div id="main-topSpisok">
+                <nav>
+                    <ul class="menu" id="sub-menu">
+                        <li>
+                            <a href="index.html">Предисловие</a>
+                        </li>
+
+                        <li><a href="2. introduction.html">Введение</a>
+                            <ul>
+                                <li><a href="3. intro-cpu.html">Немного о процессорах</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Быстрый старт</a>
+                            <ul>
+                                <li style="z-index: 9;"><a href="4. start-first.html" style="z-index: 10;">Первая
+                                        программа</a>
+                                 
+                                        <li><a href="5. start-emu8086.html">Emu8086</a></li>
+                                        <li><a href="6. start-debug.html">Debug</a></li>
+                                        <li><a href="7. start-asm.html">MASM, TASM и WASM</a>
+                                            <ul>
+                                                <li><a href="8. start-tasm.html">Ассемблирование в TASM</a></li>
+                                                <li><a href="9. start-masm.html">Ассемблирование в MASM</a></li>
+                                                <li><a href="10. start-wasm.html">Ассемблирование в WASM</a></li>
+                                                <li style="z-index: 10;"><a href="11. start-run.html" >Выполнение программы</a></li>
+                                                <li><a href="12. start-bat.html">Использование BAT-файлов</a></li>
+                                            </ul>
+
+                                        </li>
+                                        <li style="z-index: 6;"><a href="13. start-hex.html" >Шестнадцатеричный редактор</a></li>
+                                  
+                                </li>
+
+
+                               
+                            </ul>
+                        <li><a href="14. asm.html">Введение в ассемблер</a>
+                            <ul>
+                                <li style="z-index: 6;"><a href="15. asm-computer.html">Как устроен компьютер</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="16. asm-cpu.html"> Структура процессора</a></li>
+                                        <li style="z-index: 7;"><a href="17. asm-cpu-registers.html"> Регистры процессора</a></li>
+                                        <li style="z-index: 7;"><a href="18. asm-cycle-command.html"> Цикл выполнения команды</a></li>
+                                        <li style="z-index: 7;"><a href="19. asm-memory.html"> Организация памяти</a></li>
+                                        <li style="z-index: 7;"><a href="20. asm-real-mode.html"> Реальный режим</a></li>
+                                        <li style="z-index: 7;"><a href="21. asm-protected-mode.html"> Защищённый режим</a></li>
+                                    </ul>
+                                </li>
+                                <li style="z-index: 2;"><a href="22. asm-number-systems.html">Системы счисления</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="23. asm-binary-system.html">Двоичная система счисления</a></li>
+                                        <li style="z-index: 1;"><a href="24. asm-hex-system.html"> Шестнадцатеричная система счисления</a></li>
+                                        <li style="z-index: 7;"><a href="25. asm-octal-system.html"> Другие системы</a></li>
+                                    </ul></li>
+                                <li style="z-index: 1;"><a href="26. asm-data-presentation.html">Представление данных в памяти компьютера</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="27. asm-positive-numbers.html">Положительные числа</a></li>
+                                        <li style="z-index: 7;"><a href="28. asm-negative-numbers.html">Отрицательные числа</a></li>
+                                        <li style="z-index: 7;"><a href="29. asm-overflow.html">Что такое переполнение</a></li>
+                                        <li style="z-index: 7;"><a href="30. asm-flags-register.html">Регистр флагов</a></li>
+                                        <li style="z-index: 7;"><a href="31. asm-character-codes.html">Коды символов</a></li>
+                                        <li style="z-index: 7;"><a href="39. bcd.html">Что такое BCD</a></li>
+                                    </ul>
+                                   
+                                </li>
+
+                               
+                            </ul>
+                            <li style="z-index: 7;"><a href="32. asm-real.html">Вещественные числа</a>
+                                <ul>
+                                    <li style="z-index: 7;"><a href="33. asm-real-first.html">Первая попытка</a></li>
+                                    <li style="z-index: 7;"><a href="34. asm-real-normalization.html">Нормализованная запись числа</a></li>
+                                    <li style="z-index: 7;"><a href="35. asm-real-frac.html">Преобразование дробной части в двоичную форму</a></li>
+                                    <li style="z-index: 7;"><a href="36. asm-real-memory.html">Представление вещественных чисел в памяти компьютера</a></li>
+                                    <li style="z-index: 7;"><a href="37. asm-real-fixed-point.html">Числа с фиксированной точкой</a></li>
+                                    <li style="z-index: 7;"><a href="38. asm-real-floating-point.html">Числа с плавающей точкой</a></li>
+
+                                </ul>
+                            </li>
+                            <li style="z-index: 7;"><a href="40. procedures-in-assembler.html">Процедуры в Ассемблере</a></li>
+                        
+                        </li>
+
+
+
+                        <li style="z-index: 7;"><a href="Test.html">Тестирование</a></li>
+                        <li><a href="4. start-first.html"> < </a></li>
+                        <li><a href="6. start-debug.html"> > </a></li>
+                    </ul>
+                </nav>
+            </div>
+            </div>
+            <div id="main-topSpisok2" style="display: none;">
+                <nav>
+                    <ul class="menu" id="sub-menu" style="display: block; left: 9px;">
+
+                        <li>
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li style="z-index: 7;"><a href="Test.html">Тестирование</a></li>
+                        <li>
+                            <a href="index.html">Предисловие</a>
+                        </li>
+
+                        <li><a href="2. introduction.html">Введение</a>
+                            <ul style="left: 0px;">
+                                <li><a href="3. intro-cpu.html">Немного о процессорах</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Быстрый старт</a>
+                            <ul style="left: 0px;">
+                                <li style="z-index: 9;"><a href="4. start-first.html" style="z-index: 10;">Первая
+                                        программа</a>
+                                 
+                                        <li><a href="5. start-emu8086.html">Emu8086</a></li>
+                                        <li><a href="6. start-debug.html">Debug</a></li>
+                                        <li><a href="7. start-asm.html">MASM, TASM и WASM</a>
+                                            <ul style="left: 0px;">
+                                                <li><a href="8. start-tasm.html">Ассемблирование в TASM</a></li>
+                                                <li><a href="9. start-masm.html">Ассемблирование в MASM</a></li>
+                                                <li><a href="10. start-wasm.html">Ассемблирование в WASM</a></li>
+                                                <li style="z-index: 10;"><a href="11. start-run.html" >Выполнение программы</a></li>
+                                                <li><a href="12. start-bat.html">Использование BAT-файлов</a></li>
+                                            </ul>
+
+                                        </li>
+                                        <li style="z-index: 6;"><a href="13. start-hex.html" >Шестнадцатеричный редактор</a></li>
+                                  
+                                </li>
+                            </ul>
+                        <li><a href="14. asm.html">Введение в ассемблер</a>
+                            <ul style="left: 0px;">
+                                <li style="z-index: 6;"><a href="15. asm-computer.html">Как устроен компьютер</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="16. asm-cpu.html"> Структура процессора</a></li>
+                                        <li style="z-index: 7;"><a href="17. asm-cpu-registers.html"> Регистры процессора</a></li>
+                                        <li style="z-index: 7;"><a href="18. asm-cycle-command.html"> Цикл выполнения команды</a></li>
+                                        <li style="z-index: 7;"><a href="19. asm-memory.html"> Организация памяти</a></li>
+                                        <li style="z-index: 7;"><a href="20. asm-real-mode.html"> Реальный режим</a></li>
+                                        <li style="z-index: 7;"><a href="21. asm-protected-mode.html"> Защищённый режим</a></li>
+                                    </ul>
+                                </li>
+                                <li style="z-index: 2;"><a href="22. asm-number-systems.html">Системы счисления</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="23. asm-binary-system.html">Двоичная система счисления</a></li>
+                                        <li style="z-index: 1;"><a href="24. asm-hex-system.html"> Шестнадцатеричная система счисления</a></li>
+                                        <li style="z-index: 7;"><a href="25. asm-octal-system.html"> Другие системы</a></li>
+                                    </ul></li>
+                                <li style="z-index: 1;"><a href="26. asm-data-presentation.html">Представление данных в памяти компьютера</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="27. asm-positive-numbers.html">Положительные числа</a></li>
+                                        <li style="z-index: 7;"><a href="28. asm-negative-numbers.html">Отрицательные числа</a></li>
+                                        <li style="z-index: 7;"><a href="29. asm-overflow.html">Что такое переполнение</a></li>
+                                        <li style="z-index: 7;"><a href="30. asm-flags-register.html">Регистр флагов</a></li>
+                                        <li style="z-index: 7;"><a href="31. asm-character-codes.html">Коды символов</a></li>
+                                        <li style="z-index: 7;"><a href="39. bcd.html">Что такое BCD</a></li>
+                                    </ul>
+                                   
+                                </li>
+
+                               
+                            </ul>
+                            <li style="z-index: 7;"><a href="32. asm-real.html">Вещественные числа</a>
+                                <ul style="left: 0px;">
+                                    <li style="z-index: 7;"><a href="33. asm-real-first.html">Первая попытка</a></li>
+                                    <li style="z-index: 7;"><a href="34. asm-real-normalization.html">Нормализованная запись числа</a></li>
+                                    <li style="z-index: 7;"><a href="35. asm-real-frac.html">Преобразование дробной части в двоичную форму</a></li>
+                                    <li style="z-index: 7;"><a href="36. asm-real-memory.html">Представление вещественных чисел в памяти компьютера</a></li>
+                                    <li style="z-index: 7;"><a href="37. asm-real-fixed-point.html">Числа с фиксированной точкой</a></li>
+                                    <li style="z-index: 7;"><a href="38. asm-real-floating-point.html">Числа с плавающей точкой</a></li>
+
+                                </ul style="left: 0px;">
+                            </li>
+                            <li style="z-index: 7;"><a href="40. procedures-in-assembler.html">Процедуры в Ассемблере</a></li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content">
+
+                <div class="nav">
+                    <p>
+                        <a href="4. start-first.html" style="float: left;margin-top: 40%;"><</a>
+                        <a href="6. start-debug.html" style="float: right;margin-top: 40%;">></a>
+                    </p>
+                </div>
+                <article>
+
+                    <div id="contTxt">
+
+
+<!--Текст страницы-->
+
+<!--Текст страницы-->
+<h1>Emu8086</h1>
+<p>
+
+
+<p>
+Если вы скачали и установили эмулятор процессора 8086, 
+то вы можете использовать его для создания ваших первых программ на языке ассемблера. 
+На текущий момент (ноябрь 2011 г) доступна версия программы 4.08.
+</p>
+<p>
+Программа Emu8086 платная. Однако в течение 30 дней вы можете использовать её для 
+ознакомления бесплатно.
+</p>
+<p>
+Итак, вы скачали и установили программу Emu8086 на свой компьютер. Запускаем её и 
+создаём новый файл через меню FILE – NEW – COM TEMPLATE (Файл – Новый – Шаблон файла COM). 
+В редакторе исходного кода после этого мы увидим следующее:
+</p>
+<p>
+<center>
+<img border="0" width="556" height="367" src="http://av-assembler.ru/asm/afd/01_001-emu8086-new-file.png" alt="Создание нового файла в Emu8086" title="Создание нового файла в Emu8086"><br><br>
+<b>Рис. 1.1. Создание нового файла в Emu8086.</b>
+</center>
+</p>
+<p>
+Здесь надо отметить, что программы, создаваемые с помощью Ассемблеров для компьютеров 
+под управлением Windows, бывают двух типов: COM и EXE. Отличия между этими файлами 
+мы рассмотрим позже, а пока вам достаточно знать, что на первое время мы будем 
+создавать исполняемые файлы с расширением COM, так как они более простые.
+</p>
+<p>
+После создания файла в Emu8086 описанным выше способом в редакторе исходного кода 
+вы увидите строку «add your code hear» - «добавьте ваш код здесь» (рис. 1.1). Эту 
+строку мы удаляем и вставляем вместо неё следующий текст:<pre>
+MOV AH, 02h
+MOV DL, 41h
+INT 21h
+INT 20h</pre>
+Таким образом, полный текст программы будет выглядеть так:<pre>
+
+ORG 100h
+
+MOV AH, 02h
+MOV DL, 41h
+INT 21h
+INT 20h
+
+RET</pre>
+Кроме этого в верхней части ещё имеются комментарии (на рис. 1.1 – это текст зелёного цвета). 
+Комментарий в языке Ассемблера начинается с символа ; (точка с запятой) и продолжается до 
+конца строки.  
+Как я уже говорил, здесь мы не будем растолковать азы программирования, так как книга, 
+которую вы сейчас читаете, рассчитана на людей, знакомых с основами программирования.
+
+<p>
+Также отметим, что регистр символов в языке ассемблера роли не играет. Вы можете написать 
+RET, ret или Ret – это будет одна и та же команда.
+</p>
+<p>
+Вы можете сохранить этот файл куда-нибудь на диск. Но можете и не сохранять. 
+Чтобы выполнить программу, нажмите кнопку EMULATE (с зелёным треугольником) или клавишу F5. 
+Откроется два окна: окно эмулятора и окно исходного кода (рис. 1.2).
+</p>
+<p>
+<center>
+<img border="0" width="585" height="328" src="http://av-assembler.ru/asm/afd/01_002-emu8086-emulate.png" alt="Окно эмулятора Emu8086" title="Окно эмулятора Emu8086"><br><br>
+<b>Рис. 1.2. Окно эмулятора Emu8086.</b>
+</center>
+</p>
+<p>
+В окне эмулятора отображаются регистры и находятся кнопки управления программой. 
+В окне исходного кода отображается исходный текст вашей программы, где подсвечивается 
+строка, которая выполняется в данный момент. Всё это очень удобно для изучения и отладки 
+программ. Но нам это пока не надо.
+</p>
+<p>
+В окне эмулятора вы можете запустить вашу программу на выполнение целиком (кнопка RUN) 
+либо в пошаговом режиме (кнопка SINGLE STEP). Пошаговый режим удобен для отладки. Ну а 
+мы сейчас запустим программу на выполнение кнопкой RUN. После этого (если вы не сделали 
+ошибок в тексте программы) вы увидите сообщение о завершении программы (рис. 1.3). Здесь 
+вам сообщают о том, что программа передала управление операционной системе, то есть 
+программа была успешно завершена. Нажмите кнопку ОК в этом окне и вы увидите, наконец, 
+результат работы вашей первой программы на языке ассемблера (рис. 1.4).
+</p>
+<p>
+<center>
+<img border="0" width="349" height="198" src="http://av-assembler.ru/asm/afd/01_003-emu8086-msg.png" alt="Сообщение о завершении программы" title="Сообщение о завершении программы"><br><br>
+<b>Рис. 1.3. Сообщение о завершении программы.</b>
+</center>
+</p>
+<p>
+<center>
+<img border="0" width="286" height="192" src="http://av-assembler.ru/asm/afd/01_004-emu8086-prog.png" alt="Ваша первая программа выполнена" title="Ваша первая программа выполнена"><br><br>
+<b>Рис. 1.4. Ваша первая программа выполнена.</b>
+</center>
+</p>
+<p>
+Как мы уже говорили, наша первая программа выводит на экран английскую букву «А». 
+Результат оправдал наши ожидания – буква «А» выведена на экран.
+</p>
+<p>
+Здесь стоит отметить, что Emu8086 – это ЭМУЛЯТОР, то есть он эмулирует работу 
+компьютера с процессором 8086. Поэтому в описанном выше примере программа выполняется 
+не операционной системой, а эмулятором. Emu8086 может создавать и реальные программы, 
+которые могут самостоятельно выполняться на компьютере. Но описание работы с Emu8086 
+не входит в наши планы. Читайте справку и экспериментируйте – всё у вас получится.
+</p>
+<p>
+В нашем случае пока не важно, как выполняется программа – эмулятором или  операционной 
+системой. Главное – разобраться с вопросом создания программ на языке ассемблера. 
+Поэтому разберём нашу простенькую программку подробно.
+</p>
+<p>
+<strong>#make_COM#</strong> – 1-ая строка. Эта команда – специфическая для Emu8086. Она используется 
+для определения типа создаваемого файла. В нашем случае это файл с расширением .COM.
+</p>
+<p>
+<strong>ORG 100h</strong> – 2-ая строка. Эта команда устанавливает значение программного 
+счетчика в 100h, потому что при загрузке СОМ-файла в память, DOS выделяет под блок данных 
+PSP первые 256 байт (десятичное число 256 равно шестнадцатеричному 100). Код программы 
+располагается только после этого блока. Все программы, которые компилируются в файлы типа СОМ,
+должны начинаться с этой директивы.
+</p>
+<p>
+<strong>MOV AH, 02h</strong> – 3-я строка. Инструкция (или команда) MOV помещает значение 
+второго операнда в первый операнд. То есть значение 02h помещается в регистр АН. Для чего 
+это делается? 02h – это ДОСовская функция, которая выводит символ на экран. Мы пишем 
+программу для DOS, поэтому используем команды этой операционной системы (ОС). А записываем 
+мы эту функцию (а точнее ее номер) именно в регистр АН, потому что прерывание 21h использует 
+именно этот регистр.
+</p>
+<p>
+<strong>MOV DL, 41h</strong> – 4-я строка. Код символа «A» заносится в регистр DL. Код 
+символа «A» по стандарту ASCII – это 41h.
+</p>
+<p>
+<strong>INT 21h</strong> – 5-я строка. Это и есть то самое прерывание 21h – команда, 
+которая вызывает системную функцию DOS, заданную в регистре АН (в нашем примере это 
+функция 02h). Команда INT 21h – основное средство взаимодействия программ с ОС.
+</p>
+<p>
+<strong>INT 20h</strong> – 6-я строка. Это прерывание, которое сообщает операционной 
+системе о выходе из программы и о передаче управления консольному приложению. Значит, 
+при использовании INT 20h в нашем примере, управление будет передаваться программе Emu8086. 
+А в том случае, если программа уже откомпилирована и запущена из ОС, то команда INT 20h 
+вернет нас в ОС (например, в DOS). В принципе, в случае с Emu8086 эту команду можно было 
+бы пропустить, так как эту же функцию выполняет команда RET, которая вставляется в 
+исходный текст автоматически при создании нового файла по шаблону (как это сделали мы ранее). 
+Но я решил использовать INT 20h и здесь для совместимости с другими ассемблерами.
+</p>
+</div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrapper3">
+            <div class="footer_bot">
+               
+                <div class="footer_bot_cop">Учебное по дисциплине "Системное программирование"</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

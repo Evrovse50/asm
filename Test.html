@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <title>Учебное пособие по дисциплине "Микропроцессорные системы"</title>
+    <script>
+        function check()
+             
+             {
+           
+                var question;
+                var value1;
+                var value2;
+                 
+                 
+                question = 1;
+                value1 = 0;
+                value2 = 0;
+                 
+                 
+                result = "";
+           
+                var choice;
+                 
+                for (question = 1; question <= 50; question++) {
+                  
+                   var q = document.forms['quiz'].elements['q'+question];
+           
+                      for (var i = 0; i < q.length; i++) {
+                         if (q[i].checked) {
+                            choice = q[i].value;
+                       
+                         }
+                      
+                      }
+           
+                      if (choice == "value1") {
+                         value1++;
+                         
+                      }
+           
+                      if (choice == "value2") {
+                        
+                       value2++;
+                      }
+           
+           
+                   }
+           
+                if (value2 <=26) {
+           
+                  
+                   result = "ocenka2";
+           
+                }
+           
+                else if (value2 >26 && value2 <=36 ) {
+           
+                  
+                   result = "ocenka3";
+           
+                }
+           
+                else if (value2 >36 && value2 <=40 ) {
+           
+                  
+                   result = "ocenka4";
+           
+                }
+           
+                else if (value2 >40 ) {
+           
+                  
+                   result = "ocenka5";
+           
+                }
+           
+           
+                else {
+                   result = "404";
+                }
+           
+                window.location = result + '.html';
+               
+                sessionStorage.setItem("key10",value2)
+             }
+       
+           </script>
+</head>
+
+<body onload="PriZagruzke()">
+    <div class="wrapper">
+
+
+
+
+        <div class="main-container">
+            <div class="mainWrap">
+
+                <a id="touch-menu" class="mobile-menu" href="#" onclick="toggle(document.getElementById('sub-menu'))">
+                    <div class="buteer">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <i class="icon-reorder"></i>Список глав
+                </a>
+                <nav>
+                    <ul class="menu" id="sub-menu">
+
+                        <li>
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li style="z-index: 7;"><a href="Test.html">Пройти <br> тестирование</a></li>
+                        <li>
+                            <a href="index.html">Предисловие</a>
+                        </li>
+
+                        <li><a href="2. introduction.html">Введение</a>
+                            <ul>
+                                <li><a href="3. intro-cpu.html">Немного о процессорах</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Быстрый старт</a>
+                            <ul>
+                                <li style="z-index: 9;"><a href="4. start-first.html" style="z-index: 10;">Первая
+                                        программа</a>
+                                 
+                                        <li><a href="5. start-emu8086.html">Emu8086</a></li>
+                                        <li><a href="6. start-debug.html">Debug</a></li>
+                                        <li><a href="7. start-asm.html">MASM, TASM и WASM</a>
+                                            <ul>
+                                                <li><a href="8. start-tasm.html">Ассемблирование в TASM</a></li>
+                                                <li><a href="9. start-masm.html">Ассемблирование в MASM</a></li>
+                                                <li><a href="10. start-wasm.html">Ассемблирование в WASM</a></li>
+                                                <li style="z-index: 10;"><a href="11. start-run.html" >Выполнение программы</a></li>
+                                                <li><a href="12. start-bat.html">Использование BAT-файлов</a></li>
+                                            </ul>
+
+                                        </li>
+                                        <li style="z-index: 6;"><a href="13. start-hex.html" >Шестнадцатеричный редактор</a></li>
+                                  
+                                </li>
+
+
+                               
+                            </ul>
+                        <li><a href="14. asm.html">Введение в ассемблер</a>
+                            <ul>
+                                <li style="z-index: 6;"><a href="15. asm-computer.html">Как устроен компьютер</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="16. asm-cpu.html"> Структура процессора</a></li>
+                                        <li style="z-index: 7;"><a href="17. asm-cpu-registers.html"> Регистры процессора</a></li>
+                                        <li style="z-index: 7;"><a href="18. asm-cycle-command.html"> Цикл выполнения команды</a></li>
+                                        <li style="z-index: 7;"><a href="19. asm-memory.html"> Организация памяти</a></li>
+                                        <li style="z-index: 7;"><a href="20. asm-real-mode.html"> Реальный режим</a></li>
+                                        <li style="z-index: 7;"><a href="21. asm-protected-mode.html"> Защищённый режим</a></li>
+                                    </ul>
+                                </li>
+                                <li style="z-index: 2;"><a href="22. asm-number-systems.html">Системы счисления</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="23. asm-binary-system.html">Двоичная система счисления</a></li>
+                                        <li style="z-index: 1;"><a href="24. asm-hex-system.html"> Шестнадцатеричная система счисления</a></li>
+                                        <li style="z-index: 7;"><a href="25. asm-octal-system.html"> Другие системы</a></li>
+                                    </ul></li>
+                                <li style="z-index: 1;"><a href="26. asm-data-presentation.html">Представление данных в памяти компьютера</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="27. asm-positive-numbers.html">Положительные числа</a></li>
+                                        <li style="z-index: 7;"><a href="28. asm-negative-numbers.html">Отрицательные числа</a></li>
+                                        <li style="z-index: 7;"><a href="29. asm-overflow.html">Что такое переполнение</a></li>
+                                        <li style="z-index: 7;"><a href="30. asm-flags-register.html">Регистр флагов</a></li>
+                                        <li style="z-index: 7;"><a href="31. asm-character-codes.html">Коды символов</a></li>
+                                        <li style="z-index: 7;"><a href="39. bcd.html">Что такое BCD</a></li>
+                                    </ul>
+                                   
+                                </li>
+
+                               
+                            </ul>
+                            <li style="z-index: 7;"><a href="32. asm-real.html">Вещественные числа</a>
+                                <ul>
+                                    <li style="z-index: 7;"><a href="33. asm-real-first.html">Первая попытка</a></li>
+                                    <li style="z-index: 7;"><a href="34. asm-real-normalization.html">Нормализованная запись числа</a></li>
+                                    <li style="z-index: 7;"><a href="35. asm-real-frac.html">Преобразование дробной части в двоичную форму</a></li>
+                                    <li style="z-index: 7;"><a href="36. asm-real-memory.html">Представление вещественных чисел в памяти компьютера</a></li>
+                                    <li style="z-index: 7;"><a href="37. asm-real-fixed-point.html">Числа с фиксированной точкой</a></li>
+                                    <li style="z-index: 7;"><a href="38. asm-real-floating-point.html">Числа с плавающей точкой</a></li>
+
+                                </ul>
+                            </li>
+                            <li style="z-index: 7;"><a href="40. procedures-in-assembler.html">Процедуры в Ассемблере</a></li>
+                        
+                        </li>
+
+
+
+
+
+                       
+                      
+
+
+                        <li><a href="chlen">
+                                < </a>
+                        </li>
+                        <li><a href="chlen"> > </a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="content" style="padding-top: 100px; padding-left: 120px; padding-right: 120px;">
+       
+
+                <section class="main">
+                 
+                <form name="quiz" action="javascript:check();" class="quizform">
+                 
+                <div class="quizsection">
+                 
+                 
+                    <h3>1. По числу больших интегральных схем (БИС) в микропроцессорном комплекте различают микропроцессоры:</h3>
+                     
+                    <div class="answer">
+                        <input name="q1" value="value1" id="value1" type="radio"  /> одноканальные, многоканальные и многоканальные секционные
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q1" value="value2" id="value2" type="radio" /> однокристальные, многокристальные и многокристальные секционные
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q1" value="value1" id="value3" type="radio" /> одноадресные, многоадресные и многоадресные секционные
+                    </div>
+
+                    <div class="answer">
+                        <input name="q1" value="value1" id="value4" type="radio" /> одноразрядные, многоразрядные и многоразрядные секционные
+                    </div>
+                 
+                </div>
+                 
+                <div class="quizsection">
+                 
+                    <h3>2. Система команд, типы обрабатываемых данных, режимы адресации и принципы работы микропроцессора – это:</h3>
+                 
+                    <div class="answer">
+                        <input name="q2" value="value2" id="value1" type="radio"  /> Макроархитектура
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q2" value="value1" id="value2" type="radio" /> Микроархитектура
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q2" value="value1" id="value3" type="radio" /> Миниархитектура
+                    </div>
+                 
+                 
+                </div>
+                 
+                <div class="quizsection">
+                 
+                    <h3>3. С помощью чего микропроцессор координирует работу всех устройств цифровой системы?</h3>
+                 
+                    <div class="answer">
+                        <input name="q3" value="value2" id="value1" type="radio"  /> с помощью шины управления
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q3" value="value1" id="value2" type="radio" /> с помощью шины данных
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q3" value="value1" id="value3" type="radio" /> с помощью постоянного запоминающего устройства (ПЗУ)
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>4. Что называется Вводом/выводом (ВВ)?</h3>
+                 
+                    <div class="answer">
+                        <input name="q4" value="value1" id="value1" type="radio"  />  разрядностью, т.е. максимальным числом одновременно обрабатываемых двоичных разрядов
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q4" value="value2" id="value2" type="radio" /> передача данных между ядром ЭВМ, включающим в себя микропроцессор и основную память, и внешними устройствами (ВУ)
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q4" value="value1" id="value3" type="radio" />  адреса ячейки памяти, в которой находится окончательный исполнительный адрес
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>5. Что является структурным элементом формата любой команды?</h3>
+                 
+                    <div class="answer">
+                        <input name="q5" value="value2" id="value1" type="radio"  /> Код операции (КОП)
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q5" value="value1" id="value2" type="radio" /> Адрес ячейки
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q5" value="value1" id="value3" type="radio" /> Операнд
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>6. …….- это процедура или схема преобразования информации об операнде в его исполнительный адрес.</h3>
+                 
+                    <div class="answer">
+                        <input name="q6" value="value1" id="value1" type="radio"  /> Режим формата памяти
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q6" value="value2" id="value2" type="radio" />  Режим адресации памяти
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q6" value="value1" id="value3" type="radio" />Режим обслуживания памяти
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>7. Одним из способов обмена памяти к внешним устройствам является:</h3>
+                 
+                    <div class="answer">
+                        <input name="q7" value="value2" id="value1" type="radio"  /> Режим прямого доступа к памяти
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q7" value="value1" id="value2" type="radio" /> Режим формирования сигналов прерываний в памяти
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q7" value="value1" id="value3" type="radio" /> Режим обслуживания памяти
+                    </div>
+                 
+                 
+                </div>
+        
+                <div class="quizsection">
+                 
+                    <h3>8. Команды распределяют: по функциональному назначению, передача данных, обработка данных, передача управления и …..</h3>
+                 
+                    <div class="answer">
+                        <input name="q8" value="value2" id="value1" type="radio"  /> дополнительное
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q8" value="value1" id="value2" type="radio" /> двухадресное
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q8" value="value1" id="value3" type="radio" /> без адресное
+                    </div>
+                 
+                 
+                </div>
+                
+                <div class="quizsection">
+                 
+                    <h3>9. ….- микропроцессоры, в которых начало и конец выполнения операций задаются устройством управления.</h3>
+                 
+                    <div class="answer">
+                        <input name="q9" value="value1" id="value1" type="radio"  /> Универсальные микропроцессоры      
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q9" value="value1" id="value2" type="radio" /> Цифровые микропроцессоры
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q9" value="value2" id="value3" type="radio" /> Синхронные микропроцессоры
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>10. …. - могут быть применены для решения широкого круга разнообразных задач (их эффективная производительность слабо зависит от проблемной специфики решаемых задач)</h3>
+                 
+                    <div class="answer">
+                        <input name="q10" value="value2" id="value1" type="radio"  /> Универсальные микропроцессоры
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q10" value="value1" id="value2" type="radio" /> Цифровые микропроцессоры
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q10" value="value1" id="value3" type="radio" /> Синхронные микропроцессоры
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>11. …. - различные микроконтроллеры, ориентированные на выполнение сложных последовательностей логических операций, математические МП, предназначенные для повышения производительности при выполнении арифметических операций за счет, например, матричных методов их выполнения.</h3>
+                 
+                    <div class="answer">
+                        <input name="q11" value="value2" id="value1" type="radio"  /> Специализированные микропроцессоры
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q11" value="value1" id="value2" type="radio" /> Синхронные микропроцессоры
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q11" value="value1" id="value3" type="radio" /> Цифровые микропроцессоры
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>12. ….. - это обрабатывающее и управляющее устройство, выполненное с использованием технологии БИС и обладающее способностью выполнять под программным управлением обработку информации, включая ввод и вывод информации, арифметические и логические операции и принятие решений.</h3>
+                 
+                    <div class="answer">
+                        <input name="q12" value="value1" id="value1" type="radio"  /> Процессор
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q12" value="value1" id="value2" type="radio" />  Контроллер
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q12" value="value2" id="value3" type="radio" />  Микропроцессор
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>13. …… - это микропроцессорное устройство ориентированное не на производство вычислений, а на реализацию заданной функции управления.</h3>
+                 
+                    <div class="answer">
+                        <input name="q13" value="value1" id="value1" type="radio"  /> Мини-ЭВМ
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q13" value="value1" id="value2" type="radio" /> Контроллер
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q13" value="value2" id="value3" type="radio" /> Микроконтроллер
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>14. По какой шине передаются лишь выходные сигналы микропроцессора?</h3>
+                 
+                    <div class="answer">
+                        <input name="q14" value="value1" id="value1" type="radio"  /> Шина данных
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q14" value="value2" id="value2" type="radio" /> Шина адреса
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q14" value="value1" id="value3" type="radio" /> Здесь нет нужной шины
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>15. Что является важной характеристикой команды?</h3>
+                 
+                    <div class="answer">
+                        <input name="q15" value="value2" id="value1" type="radio"  /> Формат
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q15" value="value1" id="value2" type="radio" /> Процесс
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q15" value="value1" id="value3" type="radio" />Адрес
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>16. Какой из одной букв обозначается разрядность МП?</h3>
+                 
+                    <div class="answer">
+                        <input name="q16" value="value1" id="value1" type="radio"  /> Z
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q16" value="value1" id="value2" type="radio" /> а
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q16" value="value2" id="value3" type="radio" />   m
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>17. …. это вычислительная или управляющая система выполненная на основе одного или нескольких МП содержащая БИС постоянной и оперативной памяти, БИС управления вводом и выводом информации и оснащенная необходимым периферийным оборудованием (дисплей, печатающее устройство, накопители на магнитных дисках и т. п.).</h3>
+                 
+                    <div class="answer">
+                        <input name="q17" value="value1" id="value1" type="radio"  /> Универсальные - ЭВМ
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q17" value="value2" id="value2" type="radio" /> Микро-ЭВМ
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q17" value="value1" id="value3" type="radio" /> Цифровые – ЭВМ
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>18. Что означает БУПРПР?</h3>
+                 
+                    <div class="answer">
+                        <input name="q18" value="value1" id="value1" type="radio"  /> База управления последовательности работы программы реестра
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q18" value="value2" id="value2" type="radio" />Блок управлением прерыванием работы процессора
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q18" value="value1" id="value3" type="radio" /> База управлением прерывания работы регистра
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>19. Что означает БЗП?</h3>
+                 
+                    <div class="answer">
+                        <input name="q19" value="value1" id="value1" type="radio"  /> База защиты прерывания
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q19" value="value2" id="value2" type="radio" /> Блок защиты памяти
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q19" value="value1" id="value3" type="radio" /> База защиты процессора
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>20. Что означает БС?</h3>
+                 
+                    <div class="answer">
+                        <input name="q20" value="value1" id="value1" type="radio"  /> Блок синхронизации
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q20" value="value1" id="value2" type="radio" /> Верно и А и Б
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q20" value="value2" id="value3" type="radio" /> Блок синхронизации
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>21. Что означает БУФКА?</h3>
+                 
+                    <div class="answer">
+                        <input name="q21" value="value2" id="value1" type="radio"  /> Блок управления формированием кодов адресов
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q21" value="value1" id="value2" type="radio" /> База управления форматированием контроллером адреса
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q21" value="value1" id="value3" type="radio" /> Блок управления форматированием кода адреса
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>22. Что означает БУВВ?</h3>
+                 
+                    <div class="answer">
+                        <input name="q22" value="value1" id="value1" type="radio"  />  Блок управления виртуального ввода
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q22" value="value2" id="value2" type="radio" /> Блок управления ввода/вывода
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q22" value="value1" id="value3" type="radio" /> Блок управления выполнением вводом
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>23. Что означает БУПК?</h3>
+                 
+                    <div class="answer">
+                        <input name="q23" value="value2" id="value1" type="radio"  /> Блок управления последовательности команд
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q23" value="value1" id="value2" type="radio" />  Блок управления прерывания контроллера
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q23" value="value1" id="value3" type="radio" />  Блок управления процессора команд
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>24. Что означает БУВО?</h3>
+                 
+                    <div class="answer">
+                        <input name="q24" value="value2" id="value1" type="radio"  /> Блок управления выполнением операции
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q24" value="value1" id="value2" type="radio" /> Блок управления виртуальной операции
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q24" value="value1" id="value3" type="radio" /> Блок управления вводом операции
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>25. Чем характеризуется МП?</h3>
+                 
+                    <div class="answer">
+                        <input name="q25" value="value2" id="value1" type="radio"  /> Тактовой частотой, Разрядностью
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q25" value="value1" id="value2" type="radio" /> Логическим управлением
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q25" value="value1" id="value3" type="radio" />  Режимом кодирования памяти
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>26. В общем случае под Архитектурой ЭВМ понимается ….</h3>
+                 
+                    <div class="answer">
+                        <input name="q26" value="value1" id="value1" type="radio"  /> абстрактные операции ЭВМ которые имеют одинаковый интерфейс и подключены к единой информационной магистрали
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q26" value="value2" id="value2" type="radio" /> абстрактное представление машины в терминах основных функциональных модулей языка ЭВМ, структуры данных
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q26" value="value1" id="value3" type="radio" /> только одна программа
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>27. В микропроцессорах используют два метода выработки совокупности функциональных управляющих сигналов:</h3>
+                 
+                    <div class="answer">
+                        <input name="q27" value="value1" id="value1" type="radio"  /> однокристальный и многокристальный
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q27" value="value1" id="value2" type="radio" /> универсальный и цифровой
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q27" value="value2" id="value3" type="radio" /> программный и микропрограммный
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>28. За счёт чего можно расширить операционные возможности микропроцессора ?</h3>
+                 
+                    <div class="answer">
+                        <input name="q28" value="value2" id="value1" type="radio"  /> за счет увеличения числа регистров
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q28" value="value1" id="value2" type="radio" /> за счет увеличения числа памяти данных
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q28" value="value1" id="value3" type="radio" /> за счет увеличения числа ПЗУ
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>29. Что означает PrСОЗУ?</h3>
+                 
+                    <div class="answer">
+                        <input name="q29" value="value1" id="value1" type="radio"  /> различные сверхоперативное звуковые устройства
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q29" value="value2" id="value2" type="radio" /> регистровое сверхоперативное запоминающие устройства
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q29" value="value1" id="value3" type="radio" /> различные секционные многокристальные запоминающие устройства
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>30. Что является важнейшим структурным элементом формата любой команды?</h3>
+                 
+                    <div class="answer">
+                        <input name="q30" value="value1" id="value1" type="radio"  /> Регистр
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q30" value="value1" id="value2" type="radio" /> Операнд
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q30" value="value2" id="value3" type="radio" /> КОП
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>31. Процессоры, у которых в специально отведенных полях команды каждому из параллельно работающих обрабатывающих устройств предписывается действие, которое устройство должно совершить, называются процессорами с длинным командным словом, сокращенно</h3>
+                 
+                    <div class="answer">
+                        <input name="q31" value="value1" id="value1" type="radio"  /> ADSP
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q31" value="value1" id="value2" type="radio" /> RISC
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q31" value="value2" id="value3" type="radio" /> VLIW
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3> 32. В структурной схеме типовой ЭВМ, предназначенной для управления процессами в реальном времени, к ___ уровню сопряжения относятся интерфейсы датчиков (Д) и исполнительных устройств (ИУ), предназначенные для их согласования с устройствами связи с объектами (УСО)</h3>
+                 
+                    <div class="answer">
+                        <input name="q32" value="value2" id="value1" type="radio"  /> третьему
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q32" value="value1" id="value2" type="radio" /> ервому
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q32" value="value1" id="value3" type="radio" /> четвертому
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>33. …… - система управления - система управления с обратной связью</h3>
+                 
+                    <div class="answer">
+                        <input name="q33" value="value1" id="value1" type="radio"  /> Разомкнутая
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q33" value="value1" id="value2" type="radio" /> Организованная
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q33" value="value2" id="value3" type="radio" /> Замкнутая
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>34. Системы управления без обратной связи называются</h3>
+                 
+                    <div class="answer">
+                        <input name="q34" value="value2" id="value1" type="radio"  /> разомкнутыми
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q34" value="value1" id="value2" type="radio" /> целевыми
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q34" value="value1" id="value3" type="radio" /> замкнутыми
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>35. Эффективная загрузка параллельно функционирующих конвейеров обеспечивается</h3>
+                 
+                    <div class="answer">
+                        <input name="q35" value="value1" id="value1" type="radio"  /> диспетчером памяти
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q35" value="value1" id="value2" type="radio" /> постоянной памятью
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q35" value="value2" id="value3" type="radio" /> совместно аппаратурой и компилятором
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>36. Задачи ___ - задачи, при решении которых требуется построить оценку вектора состояния объекта в момент времени t по наблюдениям за выходом объекта вплоть до момента t', причем t' < t</h3>
+                 
+                    <div class="answer">
+                        <input name="q36" value="value2" id="value1" type="radio"  /> прогноза
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q36" value="value1" id="value2" type="radio" /> оптимизации
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q36" value="value1" id="value3" type="radio" /> фильтрации
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>37. В состав регистров, обеспечивающих ввод/вывод данных микроконтроллера, входят</h3>
+                 
+                    <div class="answer">
+                        <input name="q37" value="value1" id="value1" type="radio"  /> регистры состояния и индексные регистры
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q37" value="value1" id="value2" type="radio" /> регистры управления таймером
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q37" value="value2" id="value3" type="radio" /> 
+                        регистры управления параллельным вводом/выводом, регистры управления последовательным вводом/выводом и регистры управления аналоговым вводом/выводом
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>38. В ___ микроконтроллера прекращает работу центральный процессор, но продолжают функционировать периферийные модули, которые контролируют состояние объекта управления</h3>
+                 
+                    <div class="answer">
+                        <input name="q38" value="value1" id="value1" type="radio"  /> активном режиме
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q38" value="value1" id="value2" type="radio" /> режиме останова
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q38" value="value2" id="value3" type="radio" /> режиме ожидания
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>39. Устройство обработки данных современного микропроцессора представляет собой множество</h3>
+                 
+                    <div class="answer">
+                        <input name="q39" value="value2" id="value1" type="radio"  /> конвейеров
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q39" value="value1" id="value2" type="radio" /> очередей команд, связанных с арифметико-логическим устройством (АЛУ)
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q39" value="value1" id="value3" type="radio" /> операционных элементов
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>40. В МК PIC16F8X реализованы концепции раздельных шин таким образом, что</h3>
+                 
+                    <div class="answer">
+                        <input name="q40" value="value1" id="value1" type="radio"  /> все шины раздельные и имеют ширину 24 бит
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q40" value="value1" id="value2" type="radio" /> цикл выполнения команды состоит из четырех тактов, все команды выполняются за один цикл
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q40" value="value2" id="value3" type="radio" /> шина данных и память данных (ОЗУ) имеют ширину 8 бит, а программная шина и программная память (ПЗУ) имеют ширину 14 бит
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>41. Для приложений, требующих выполнения больших объемов математических вычислений (таких как цифровая фильтрация сигнала, вычисление корреляционных функций и т.п.), предпочтительнее использовать сигнальные микропроцессоры компании</h3>
+                 
+                    <div class="answer">
+                        <input name="q41" value="value2" id="value1" type="radio"  /> Analog Devices
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q41" value="value1" id="value2" type="radio" /> Motorola
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q41" value="value1" id="value3" type="radio" /> MIPS
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>42. Строка, копия которой не находится в кэше какого-либо другого модуля, кроме, возможно, резидентного для этой строки, называется</h3>
+                 
+                    <div class="answer">
+                        <input name="q42" value="value1" id="value1" type="radio"  /> "удаленно-разделенной строкой"
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q42" value="value1" id="value2" type="radio" /> "удаленно-измененной строкой "
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q42" value="value2" id="value3" type="radio" /> "некэшированной строкой"
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>43. В состав регистров управления микроконтроллера входят</h3>
+                 
+                    <div class="answer">
+                        <input name="q43" value="value1" id="value1" type="radio"  /> регистры управления параллельным вводом/выводом
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q43" value="value2" id="value2" type="radio" /> регистры управления прерываниями и регистры управления таймером
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q43" value="value1" id="value3" type="radio" /> регистры состояния
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>44. ___ процессоры - процессоры, в основе работы которых лежит принцип обработки многих данных с помощью одной команды</h3>
+                 
+                    <div class="answer">
+                        <input name="q44" value="value2" id="value1" type="radio"  /> Потоковые
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q44" value="value1" id="value2" type="radio" /> ДНК-
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q44" value="value1" id="value3" type="radio" /> Нейронные
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>45. В мультипроцессорных системах получили широкое распространение сигнальные процессоры с плавающей точкой</h3>
+                 
+                    <div class="answer">
+                        <input name="q45" value="value1" id="value1" type="radio"  /> DSP96002
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q45" value="value1" id="value2" type="radio" /> TMS320C4x
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q45" value="value2" id="value3" type="radio" /> Alpha 21264
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>46. Организация микроконтроллера, при которой на базе одного процессорного ядра (центрального процессора) проектируется ряд (линейка) микроконтроллеров, различающихся объемом и типом памяти программ, объемом памяти данных, набором периферийных модулей, частотой синхронизации, называется</h3>
+                 
+                    <div class="answer">
+                        <input name="q46" value="value2" id="value1" type="radio"  /> модульной организацией микроконтроллера
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q46" value="value1" id="value2" type="radio" /> целостной организацией микроконтроллера
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q46" value="value1" id="value3" type="radio" /> линейной организацией микроконтроллера
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>47. Для преодоления лишних WAR и WAW зависимостей, возникающих в результате ограниченности логических ресурсов (ячеек памяти, регистров), используется механизм</h3>
+                 
+                    <div class="answer">
+                        <input name="q47" value="value2" id="value1" type="radio"  /> динамического отображения определяемых текстом программы логических ресурсов на физические ресурсы микропроцессора
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q47" value="value1" id="value2" type="radio" /> статического отображения определяемых текстом программы логических ресурсов на физические ресурсы микропроцессора
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q47" value="value1" id="value3" type="radio" /> буферизации логических ресурсов
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>48. Если микроконтроллер использует общую область памяти для размещения данных и стека, то существует опасность, что </h3>
+                 
+                    <div class="answer">
+                        <input name="q48" value="value1" id="value1" type="radio"  /> микроконтроллер сгорит
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q48" value="value1" id="value2" type="radio" /> после слишком большого количества вызовов подпрограмм в стеке окажется неправильный адрес возврата
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q48" value="value2" id="value3" type="radio" /> при переполнении стека произойдет запись в область данных, и что будет сделана попытка записи загружаемых в стек данных в область ПЗУ
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>49. Свойство открытых систем, выражающееся в возможности исполнения программы на различных ресурсах (объем памяти, число и производительность процессоров) с пропорциональным изменению ресурсов значением показателей эффективности, называется</h3>
+                 
+                    <div class="answer">
+                        <input name="q49" value="value1" id="value1" type="radio"  /> переносимостью
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q49" value="value2" id="value2" type="radio" /> масштабируемостью
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q49" value="value1" id="value3" type="radio" /> взаимодействием систем
+                    </div>
+                 
+                 
+                </div>
+                <div class="quizsection">
+                 
+                    <h3>50. Время машинного цикла МК PIC16CXXX и PIC17CXXX при тактовой частоте 20 МГц составляет ___ нс</h3>
+                 
+                    <div class="answer">
+                        <input name="q50" value="value2" id="value1" type="radio"  /> 200
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q50" value="value1" id="value2" type="radio" /> 3000
+                    </div>
+                 
+                    <div class="answer">
+                        <input name="q50" value="value1" id="value3" type="radio" /> 1000
+                    </div>
+                 
+                 
+                </div>
+                 <br>   
+                <input value="Ответить" type="submit" /> <input value="Сбросить ответы" type="reset" />
+                <br>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <div class="footer">
+        <div class="wrapper3">
+            <div class="footer_top">
+
+                <div class="footer_menu">
+
+                </div>
+            </div>
+            <div class="adress">
+                
+
+            </div>
+            <div class="footer_menu_bot">
+
+
+               
+
+            </div>
+            <div class="footer_bot">
+                <div class="footer_bot_social">
+                    
+                </div>
+                <div class="footer_bot_cop">Учебное пособие по дисциплине "Микропроцессорные системы"</div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+

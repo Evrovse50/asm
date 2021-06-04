@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <title>Учебное по дисциплине "Системное программирование"</title>
+</head>
+
+<body onload="PriZagruzke()">
+    <div class="wrapper">
+
+
+
+
+        <div class="main-container">
+            <div class="mainWrap">
+
+                <a id="touch-menu" class="mobile-menu" href="#" onclick="oAdaptiv()">
+                    <div class="buteer">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <i class="icon-reorder"></i>Список глав
+                </a>
+                <div id="main-topSpisok">
+                <nav>
+                    <ul class="menu" id="sub-menu">
+                        <li>
+                            <a href="index.html">Предисловие</a>
+                        </li>
+
+                        <li><a href="2. introduction.html">Введение</a>
+                            <ul>
+                                <li><a href="3. intro-cpu.html">Немного о процессорах</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Быстрый старт</a>
+                            <ul>
+                                <li style="z-index: 9;"><a href="4. start-first.html" style="z-index: 10;">Первая
+                                        программа</a>
+                                 
+                                        <li><a href="5. start-emu8086.html">Emu8086</a></li>
+                                        <li><a href="6. start-debug.html">Debug</a></li>
+                                        <li><a href="7. start-asm.html">MASM, TASM и WASM</a>
+                                            <ul>
+                                                <li><a href="8. start-tasm.html">Ассемблирование в TASM</a></li>
+                                                <li><a href="9. start-masm.html">Ассемблирование в MASM</a></li>
+                                                <li><a href="10. start-wasm.html">Ассемблирование в WASM</a></li>
+                                                <li style="z-index: 10;"><a href="11. start-run.html" >Выполнение программы</a></li>
+                                                <li><a href="12. start-bat.html">Использование BAT-файлов</a></li>
+                                            </ul>
+
+                                        </li>
+                                        <li style="z-index: 6;"><a href="13. start-hex.html" >Шестнадцатеричный редактор</a></li>
+                                  
+                                </li>
+
+
+                               
+                            </ul>
+                        <li><a href="14. asm.html">Введение в ассемблер</a>
+                            <ul>
+                                <li style="z-index: 6;"><a href="15. asm-computer.html">Как устроен компьютер</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="16. asm-cpu.html"> Структура процессора</a></li>
+                                        <li style="z-index: 7;"><a href="17. asm-cpu-registers.html"> Регистры процессора</a></li>
+                                        <li style="z-index: 7;"><a href="18. asm-cycle-command.html"> Цикл выполнения команды</a></li>
+                                        <li style="z-index: 7;"><a href="19. asm-memory.html"> Организация памяти</a></li>
+                                        <li style="z-index: 7;"><a href="20. asm-real-mode.html"> Реальный режим</a></li>
+                                        <li style="z-index: 7;"><a href="21. asm-protected-mode.html"> Защищённый режим</a></li>
+                                    </ul>
+                                </li>
+                                <li style="z-index: 2;"><a href="22. asm-number-systems.html">Системы счисления</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="23. asm-binary-system.html">Двоичная система счисления</a></li>
+                                        <li style="z-index: 1;"><a href="24. asm-hex-system.html"> Шестнадцатеричная система счисления</a></li>
+                                        <li style="z-index: 7;"><a href="25. asm-octal-system.html"> Другие системы</a></li>
+                                    </ul></li>
+                                <li style="z-index: 1;"><a href="26. asm-data-presentation.html">Представление данных в памяти компьютера</a>
+                                    <ul>
+                                        <li style="z-index: 7;"><a href="27. asm-positive-numbers.html">Положительные числа</a></li>
+                                        <li style="z-index: 7;"><a href="28. asm-negative-numbers.html">Отрицательные числа</a></li>
+                                        <li style="z-index: 7;"><a href="29. asm-overflow.html">Что такое переполнение</a></li>
+                                        <li style="z-index: 7;"><a href="30. asm-flags-register.html">Регистр флагов</a></li>
+                                        <li style="z-index: 7;"><a href="31. asm-character-codes.html">Коды символов</a></li>
+                                        <li style="z-index: 7;"><a href="39. bcd.html">Что такое BCD</a></li>
+                                    </ul>
+                                   
+                                </li>
+
+                               
+                            </ul>
+                            <li style="z-index: 7;"><a href="32. asm-real.html">Вещественные числа</a>
+                                <ul>
+                                    <li style="z-index: 7;"><a href="33. asm-real-first.html">Первая попытка</a></li>
+                                    <li style="z-index: 7;"><a href="34. asm-real-normalization.html">Нормализованная запись числа</a></li>
+                                    <li style="z-index: 7;"><a href="35. asm-real-frac.html">Преобразование дробной части в двоичную форму</a></li>
+                                    <li style="z-index: 7;"><a href="36. asm-real-memory.html">Представление вещественных чисел в памяти компьютера</a></li>
+                                    <li style="z-index: 7;"><a href="37. asm-real-fixed-point.html">Числа с фиксированной точкой</a></li>
+                                    <li style="z-index: 7;"><a href="38. asm-real-floating-point.html">Числа с плавающей точкой</a></li>
+
+                                </ul>
+                            </li>
+                            <li style="z-index: 7;"><a href="40. procedures-in-assembler.html">Процедуры в Ассемблере</a></li>
+                        
+                        </li>
+
+
+
+                        <li style="z-index: 7;"><a href="Test.html">Тестирование</a></li>
+                        <li><a href="29. asm-overflow.html"> < </a></li>
+                        <li><a href="31. asm-character-codes.html"> > </a></li>
+                    </ul>
+                </nav>
+            </div>
+            </div>
+            <div id="main-topSpisok2" style="display: none;">
+                <nav>
+                    <ul class="menu" id="sub-menu" style="display: block; left: 9px;">
+
+                        <li>
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li style="z-index: 7;"><a href="Test.html">Тестирование</a></li>
+                        <li>
+                            <a href="index.html">Предисловие</a>
+                        </li>
+
+                        <li><a href="2. introduction.html">Введение</a>
+                            <ul style="left: 0px;">
+                                <li><a href="3. intro-cpu.html">Немного о процессорах</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Быстрый старт</a>
+                            <ul style="left: 0px;">
+                                <li style="z-index: 9;"><a href="4. start-first.html" style="z-index: 10;">Первая
+                                        программа</a>
+                                 
+                                        <li><a href="5. start-emu8086.html">Emu8086</a></li>
+                                        <li><a href="6. start-debug.html">Debug</a></li>
+                                        <li><a href="7. start-asm.html">MASM, TASM и WASM</a>
+                                            <ul style="left: 0px;">
+                                                <li><a href="8. start-tasm.html">Ассемблирование в TASM</a></li>
+                                                <li><a href="9. start-masm.html">Ассемблирование в MASM</a></li>
+                                                <li><a href="10. start-wasm.html">Ассемблирование в WASM</a></li>
+                                                <li style="z-index: 10;"><a href="11. start-run.html" >Выполнение программы</a></li>
+                                                <li><a href="12. start-bat.html">Использование BAT-файлов</a></li>
+                                            </ul>
+
+                                        </li>
+                                        <li style="z-index: 6;"><a href="13. start-hex.html" >Шестнадцатеричный редактор</a></li>
+                                  
+                                </li>
+                            </ul>
+                        <li><a href="14. asm.html">Введение в ассемблер</a>
+                            <ul style="left: 0px;">
+                                <li style="z-index: 6;"><a href="15. asm-computer.html">Как устроен компьютер</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="16. asm-cpu.html"> Структура процессора</a></li>
+                                        <li style="z-index: 7;"><a href="17. asm-cpu-registers.html"> Регистры процессора</a></li>
+                                        <li style="z-index: 7;"><a href="18. asm-cycle-command.html"> Цикл выполнения команды</a></li>
+                                        <li style="z-index: 7;"><a href="19. asm-memory.html"> Организация памяти</a></li>
+                                        <li style="z-index: 7;"><a href="20. asm-real-mode.html"> Реальный режим</a></li>
+                                        <li style="z-index: 7;"><a href="21. asm-protected-mode.html"> Защищённый режим</a></li>
+                                    </ul>
+                                </li>
+                                <li style="z-index: 2;"><a href="22. asm-number-systems.html">Системы счисления</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="23. asm-binary-system.html">Двоичная система счисления</a></li>
+                                        <li style="z-index: 1;"><a href="24. asm-hex-system.html"> Шестнадцатеричная система счисления</a></li>
+                                        <li style="z-index: 7;"><a href="25. asm-octal-system.html"> Другие системы</a></li>
+                                    </ul></li>
+                                <li style="z-index: 1;"><a href="26. asm-data-presentation.html">Представление данных в памяти компьютера</a>
+                                    <ul style="left: 0px;">
+                                        <li style="z-index: 7;"><a href="27. asm-positive-numbers.html">Положительные числа</a></li>
+                                        <li style="z-index: 7;"><a href="28. asm-negative-numbers.html">Отрицательные числа</a></li>
+                                        <li style="z-index: 7;"><a href="29. asm-overflow.html">Что такое переполнение</a></li>
+                                        <li style="z-index: 7;"><a href="30. asm-flags-register.html">Регистр флагов</a></li>
+                                        <li style="z-index: 7;"><a href="31. asm-character-codes.html">Коды символов</a></li>
+                                        <li style="z-index: 7;"><a href="39. bcd.html">Что такое BCD</a></li>
+                                    </ul>
+                                   
+                                </li>
+
+                               
+                            </ul>
+                            <li style="z-index: 7;"><a href="32. asm-real.html">Вещественные числа</a>
+                                <ul style="left: 0px;">
+                                    <li style="z-index: 7;"><a href="33. asm-real-first.html">Первая попытка</a></li>
+                                    <li style="z-index: 7;"><a href="34. asm-real-normalization.html">Нормализованная запись числа</a></li>
+                                    <li style="z-index: 7;"><a href="35. asm-real-frac.html">Преобразование дробной части в двоичную форму</a></li>
+                                    <li style="z-index: 7;"><a href="36. asm-real-memory.html">Представление вещественных чисел в памяти компьютера</a></li>
+                                    <li style="z-index: 7;"><a href="37. asm-real-fixed-point.html">Числа с фиксированной точкой</a></li>
+                                    <li style="z-index: 7;"><a href="38. asm-real-floating-point.html">Числа с плавающей точкой</a></li>
+
+                                </ul style="left: 0px;">
+                            </li>
+                            <li style="z-index: 7;"><a href="40. procedures-in-assembler.html">Процедуры в Ассемблере</a></li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content">
+
+                <div class="nav">
+                    <p>
+                        <a href="29. asm-overflow.html" style="float: left;margin-top: 40%;"><</a>
+                        <a href="31. asm-character-codes.html" style="float: right;margin-top: 40%;">></a>
+                    </p>
+                </div>
+                <article>
+
+                    <div id="contTxt">
+
+
+<!--Текст страницы-->
+
+<!--Текст страницы-->
+<h1>Регистр флагов</h1>
+<p>
+
+
+<p>
+<strong>Регистр флагов</strong> – это очень важный 
+<a>регистр</a> 
+процессора, который используется при выполнении большинства команд. Регистр флагов носит 
+название <strong>EFLAGS</strong>. Это 32-разрядный регистр. Однако старшие 16 разрядов используются при работе в защищённом режиме, и пока мы их рассматривать не будем. К младшим 16 разрядам этого регистра можно обращаться как к отдельному регистру с именем FLAGS. Именно этот регистр мы и рассмотрим в этом разделе.
+</p>
+<p>
+Каждый бит в регистре <strong>FLAGS</strong> является флагом. <strong>Флаг</strong> – это 
+один или несколько битов памяти, которые могут принимать двоичные значения 
+или комбинации значений и характеризуют состояние какого-либо объекта. 
+Обычно флаг может принимать одно из двух логических значений. Поскольку в нашем 
+случае речь идёт о бите, то каждый флаг в регистре может принимать либо значение 0, 
+либо значение 1. Флаги устанавливаются в 1 при определённых условиях, или установка 
+флага в 1 изменяет поведение процессора. На рис. 2.4 показано, какие флаги находятся 
+в разрядах регистра FLAGS.
+</p>
+<p align="center">
+<table border="0" cellpadding="5px" cellspacing="1px" bgcolor="gray">
+<tr bgcolor="white">
+  <td bgcolor="silver"><b>Бит</b></td>
+  <td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr bgcolor="white">
+  <td bgcolor="silver"><b>Флаг</b></td>
+  <td>0</td><td>NT</td><td colspan="2" align="center">IOPL</td><td>OF</td><td>DF</td><td>IF</td><td>TF</td><td>SF</td><td>ZF</td><td>0</td><td>AF</td><td>0</td><td>PF</td><td>1</td><td>CF</td>
+</tr>
+</table><br>
+<b>Рис. 2.4. Регистр флагов FLAGS.</b>
+
+<p>
+<strong>Флаг установлен</strong>, если значение соответствующего ему бита равно 1. 
+</p>
+<p>
+<strong>Флаг сброшен</strong>, если значение соответствующего ему бита равно 0.
+</p>
+<p>
+В таблице 2.6 приведено описание флагов регистра FLAGS.
+</p>
+<p>
+<b>Таблица 2.6. Описание флагов регистра FLAGS.</b><br><br>
+<table border="0" cellpadding="5px" cellspacing="1px" bgcolor="gray">
+<tr bgcolor="silver">
+  <td><b>Бит</b></td>
+  <td><b>Обозначение</b></td>
+  <td><b>Название</b></td>
+  <td><b>Описание</b></td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">0</td>
+  <td align="center">CF</td>
+  <td>Carry Flag</td>
+  <td><b>Флаг переноса</b>. Устанавливается в 1, если результат предыдущей операции не уместился
+  в приёмнике и произошёл перенос из старшего бита или если требуется заём (при вычитании). 
+  Иначе установлен в 0. Например, этот флаг будет установлен при переполнении, рассмотренном в 
+  <a>предыдущем разделе</a>.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">1</td>
+  <td align="center">1</td>
+  <td>-</td>
+  <td>Зарезервирован.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">2</td>
+  <td align="center">PF</td>
+  <td>Parity Flag</td>
+  <td><b>Флаг чётности</b>. Устанавливается в 1, если младший байт результата предыдущей команды содержит чётное количество битов, равных 1. Если количество единиц в младшем байте нечётное, то этот флаг равен 0.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">3</td>
+  <td align="center">0</td>
+  <td>-</td>
+  <td>Зарезервирован.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">4</td>
+  <td align="center">AF</td>
+  <td>Auxiliary Carry Flag</td>
+  <td><b>Вспомогательный флаг переноса</b> (или <b>флаг полупереноса</b>). Устанавливается в 1, если в результате предыдущей операции произошёл перенос (или заём) из третьего бита в четвёртый. Этот флаг используется автоматически командами двоично-десятичной коррекции.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">5</td>
+  <td align="center">0</td>
+  <td>-</td>
+  <td>Зарезервирован.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">6</td>
+  <td align="center">ZF</td>
+  <td>Zero Flag</td>
+  <td><b>Флаг нуля</b>. Устанавливается 1, если результат предыдущей команды равен 0.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">7</td>
+  <td align="center">SF</td>
+  <td>Sign Flag</td>
+  <td><b>Флаг знака</b>. Этот флаг всегда равен старшему биту результата.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">8</td>
+  <td align="center">TF</td>
+  <td>Trap Flag</td>
+  <td><b>Флаг трассировки</b> (или <b>флаг ловушки</b>). Он был предусмотрен для работы отладчиков в пошаговом выполнении, которые не используют защищённый режим. Если этот флаг установить в 1, то после выполнения каждой программной команды управление временно передаётся отладчику (вызывается прерывание 1).</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">9</td>
+  <td align="center">IF</td>
+  <td>Interrupt Enable Flag</td>
+  <td><b>Флаг разрешения прерываний</b>. Если сбросить этот флаг в 0, то процессор перестанет обрабатывать прерывания от внешних устройств. Обычно его сбрасывают на короткое время для выполнения критических участков программы.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">10</td>
+  <td align="center">DF</td>
+  <td>Direction Flag</td>
+  <td><b>Флаг направления</b>. Контролирует поведение команд обработки строк. Если установлен в 1, то строки обрабатываются в сторону уменьшения адресов, если сброшен в 0, то наоборот.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">11</td>
+  <td align="center">OF</td>
+  <td>Overflow Flag</td>
+  <td><b>Флаг переполнения</b>. Устанавливается в 1, если результат предыдущей арифметической операции над числами со знаком выходит за допустимые для них пределы. Например, если при сложении двух положительных чисел получается число со старшим битом, равным единице, то есть отрицательное. И наоборот.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">12<br>13</td>
+  <td align="center">IOPL</td>
+  <td>I/O Privilege Level</td>
+  <td>Уровень приоритета ввода/вывода.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">14</td>
+  <td align="center">NT</td>
+  <td>Nested Task</td>
+  <td>Флаг вложенности задач.</td>  
+</tr>
+<tr bgcolor="white">
+  <td align="center">15</td>
+  <td align="center">0</td>
+  <td>-</td>
+  <td>Зарезервирован.</td>  
+</tr>
+</table>
+
+<p>
+Значения некоторых флагов можно изменять напрямую с помощью специальных команд. 
+Однако нет инструкций, которые бы позволяли обращаться к регистру флагов как к 
+обычному регистру по имени. Некоторые флаги устанавливаются автоматически и предназначены 
+только для чтения. 
+</p>
+<p>
+Сейчас вам будет понятно далеко не всё из того, что описано в таблице 2.4. Например, 
+вы пока не знаете, что такое прерывания. Но всему своё время. Пока просто запомните 
+страницу с описанием регистра флагов и возвращайтесь к ней по мере необходимости.
+</p>
+<p>
+Системные флаги IOPL предназначены для управления операционной средой в защищённом режиме. 
+Они не используются в прикладных программах.
+</p>
+<br>
+<!--Конец текста страницы-->
+
+
+
+
+</div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrapper3">
+            <div class="footer_bot">
+               
+                <div class="footer_bot_cop">Учебное по дисциплине "Системное программирование"</div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
